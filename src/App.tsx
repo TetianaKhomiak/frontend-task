@@ -1,6 +1,6 @@
 import Header from "./components/layout/header/Header";
 import { Routes, Route } from "react-router-dom";
-import KnowledgeAndNews from "./pages/KnowledgeAndNews/KnowledgeAndNews";
+import KnowledgeAndNews from "./pages/KnowledgeAndNews";
 import Domains from "./pages/Domains";
 import Hosting from "./pages/Hosting";
 import WordPress from "./pages/WordPress";
