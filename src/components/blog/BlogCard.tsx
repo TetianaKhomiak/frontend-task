@@ -1,5 +1,6 @@
 import type { BlogCardProps } from "../../types/types";
 import ArrowIcon from "../../assets/icons/ui/arrow-right.png";
+import { Link } from "react-router-dom";
 
 const BlogCard = ({
   image,
@@ -24,10 +25,12 @@ const BlogCard = ({
           {text}
         </p>
 
-        <button className="mt-3 font-(family-name:--font-anonymous) font-bold text-[16px] inline-flex items-center text-left py-1">
+        <Link
+          to="#"
+          className="mt-3 font-(family-name:--font-anonymous) font-bold text-[16px] inline-flex items-center text-left py-1">
           {buttonText}
           <img src={ArrowIcon} alt="arrow icon" className="ml-3" />
-        </button>
+        </Link>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import UserIcon from "../../../assets/icons/ui/user.svg";
 import NetworkStatusIcon from "../../../assets/icons/ui/network-status.svg";
 import CartIcon from "../../../assets/icons/ui/cart.svg";
+import { Link } from "react-router-dom";
 
 const TopBar = () => {
   return (
@@ -24,22 +25,22 @@ const TopBar = () => {
         <span>Stanje omrežja</span>
       </div>
 
-      <button
-        type="button"
-        className="w-[101px] flex justify-between items-center">
+      <Link to="#" className="w-[101px] flex justify-between items-center">
         <img src={UserIcon} alt="Moj Žabec" className="w-4 h-4" />
         <span>Moj Žabec</span>
-      </button>
+      </Link>
 
-      <button
-        type="button"
-        className="w-[94px] flex justify-between items-center">
+      <Link to="#" className="w-[94px] flex justify-between items-center">
         <img src={CartIcon} alt="Košarica" className="w-4 h-4" />
         <span>Košarica</span>
-      </button>
+      </Link>
 
-      <button type="button">EN</button>
-      <button type="button">Nočni način</button>
+      <Link to="#" type="button">
+        EN
+      </Link>
+      <Link to="#" type="button">
+        Nočni način
+      </Link>
     </div>
   );
 };

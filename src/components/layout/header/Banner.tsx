@@ -1,4 +1,5 @@
 import { CountdownTimer } from "./CountdownTimer";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   const targetDate = new Date("2026-02-20T00:00:00");
@@ -9,7 +10,7 @@ const Banner = () => {
         <p className="flex items-center gap-2">
           Akcija domen .si še <CountdownTimer targetDate={targetDate} />
         </p>
-        <button type="button">PREVERI ZDAJ!</button>
+        <Link to="#">PREVERI ZDAJ!</Link>
       </div>
     </div>
   );
