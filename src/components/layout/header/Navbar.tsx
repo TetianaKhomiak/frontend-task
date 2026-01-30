@@ -7,7 +7,7 @@ import WordPress from "../../../pages/WordPress";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between font-montserrat font-extrabold text-sm">
+    <div className="w-full flex justify-between font-montserrat font-extrabold text-sm">
       <Domains />
       <Hosting />
       <WordPress />

@@ -7,12 +7,16 @@ const Header = () => {
   return (
     <header>
       <Banner />
-      <div className="w-[85%] py-4 mx-auto flex justify-between items-center gap-20">
-        <img src={Logo} alt="Company Logo" className="w-[88px] h-[88px]" />
-        <div className="flex flex-col">
+      <div className="max-w-[1216px] mx-auto py-5 flex justify-between items-center">
+        <img
+          src={Logo}
+          alt="Žabec Company Logo"
+          className="w-[88px] h-[88px]"
+        />
+        <nav className="flex-1 max-w-[955px] h-[88px] flex flex-col justify-between">
           <TopBar />
           <Navbar />
-        </div>
+        </nav>
       </div>
     </header>
   );

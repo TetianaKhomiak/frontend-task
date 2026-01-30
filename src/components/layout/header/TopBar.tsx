@@ -1,38 +1,45 @@
-import UserIcon from "../../../assets/icons/user.svg";
-import NetworkStatusIcon from "../../../assets/icons/network-status.svg";
-import CartIcon from "../../../assets/icons/cart.svg";
+import UserIcon from "../../../assets/icons/ui/user.svg";
+import NetworkStatusIcon from "../../../assets/icons/ui/network-status.svg";
+import CartIcon from "../../../assets/icons/ui/cart.svg";
 
 const TopBar = () => {
   return (
-    <div className="w-[95%] mx-auto flex items-center gap-4 font-(family-name:--font-anonymous) text-[14px] font-bold">
-      {/* First group (2 rows stacked) */}
+    <div className="w-full flex justify-between items-center text-[14px] font-(family-name:--font-anonymous) font-bold">
       <div className="flex flex-col">
-        <div>Non-stop 24/7</div>
-        <div>podpora@zabec.net</div>
+        <p className="text-[12px]">Non-stop 24/7</p>
+        <address className="not-italic">
+          <a href="mailto:podpora@zabec.net">podpora@zabec.net</a>
+        </address>
       </div>
 
-      {/* Second group (2 rows stacked) */}
       <div className="flex flex-col">
-        <div>Delovniki 8:00-20:00</div>
-        <div>040 333 666</div>
+        <p className="text-[12px]">Delovniki 8:00-20:00</p>
+        <address className="not-italic">
+          <a href="tel:040333666">040 333 666</a>
+        </address>
       </div>
 
-      {/* Remaining 5 items, 1 row each */}
-      <div className="flex items-center gap-2">
+      <div className="w-[139px] flex items-center gap-2">
         <img src={NetworkStatusIcon} alt="Stanje omrežja" className="w-4 h-4" />
         <span>Stanje omrežja</span>
       </div>
-      <div className="flex items-center gap-2">
+
+      <button
+        type="button"
+        className="w-[101px] flex justify-between items-center">
         <img src={UserIcon} alt="Moj Žabec" className="w-4 h-4" />
         <span>Moj Žabec</span>
-      </div>
-      <div className="flex items-center gap-2">
+      </button>
+
+      <button
+        type="button"
+        className="w-[94px] flex justify-between items-center">
         <img src={CartIcon} alt="Košarica" className="w-4 h-4" />
         <span>Košarica</span>
-      </div>
+      </button>
 
-      <div>EN</div>
-      <button>Nočni način</button>
+      <button type="button">EN</button>
+      <button type="button">Nočni način</button>
     </div>
   );
 };
