@@ -1,4 +1,5 @@
 import type { BlogCardProps } from "../../types/types";
+import ArrowIcon from "../../assets/icons/ui/arrow-right.png";
 
 const BlogCard = ({
   image,
@@ -10,16 +11,23 @@ const BlogCard = ({
 }: BlogCardProps) => {
   return (
     <div className="flex flex-col">
-      <img src={image} alt={title} className="w-full h-48 object-cover" />
+      <img src={image} alt={title} />
 
       <div className="p-4 flex flex-col flex-1">
-        <p>
+        <p className="font-(family-name:--font-anonymous) font-normal text-[14px]">
           {author} | {date}
         </p>
-        <h3 className="mt-2">{title}</h3>
-        <p className=" mt-1 flex-1">{text}</p>
+        <h3 className="mt-2 font-(family-name:--font-montserrat) font-black text-[#6CB63F] text-[16px]">
+          {title}
+        </h3>
+        <p className="mt-2 flex-1 font-(family-name:--font-anonymous) font-normal text-[16px]">
+          {text}
+        </p>
 
-        <button>{buttonText}</button>
+        <button className="mt-3 font-(family-name:--font-anonymous) font-bold text-[16px] inline-flex items-center text-left py-1">
+          {buttonText}
+          <img src={ArrowIcon} alt="arrow icon" className="ml-3" />
+        </button>
       </div>
     </div>
   );
