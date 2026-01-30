@@ -1,19 +1,37 @@
-import KnowledgeAndNews from "../../../pages/KnowledgeAndNews/KnowledgeAndNews";
-import Domains from "../../../pages/Domains";
-import Hosting from "../../../pages/Hosting";
-import OnlineStores from "../../../pages/OnlineStores";
-import VpsHosting from "../../../pages/VpsHosting";
-import WordPress from "../../../pages/WordPress";
+import { NavLink } from "react-router-dom";
+import underlineIcon from "../../../assets/icons/ui/hover-underline.png";
 
 const Navbar = () => {
+  const links = [
+    { name: "DOMENE", to: "/domains" },
+    { name: "GOSTOVANJE", to: "/hosting" },
+    { name: "WORDPRESS", to: "/wordpress" },
+    { name: "SPLETNE TRGOVINE", to: "/onlinestores" },
+    { name: "VPS GOSTOVANJE", to: "/vpshosting" },
+    { name: "ZNANJE IN NOVOSTI", to: "/*" },
+  ];
+
   return (
     <div className="w-full flex justify-between font-montserrat font-extrabold text-sm">
-      <Domains />
-      <Hosting />
-      <WordPress />
-      <OnlineStores />
-      <VpsHosting />
-      <KnowledgeAndNews />
+      {links.map((link) => (
+        <NavLink
+          key={link.to}
+          to={link.to}
+          className="relative flex flex-col items-center pb-1">
+          {({ isActive }) => (
+            <>
+              <span>{link.name}</span>
+              {isActive && (
+                <img
+                  src={underlineIcon}
+                  alt="underline"
+                  className="w-full h-1 mt-1 object-contain"
+                />
+              )}
+            </>
+          )}
+        </NavLink>
+      ))}
     </div>
   );
 };

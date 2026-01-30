@@ -4,7 +4,7 @@ import BlogCard from "../../components/blog/BlogCard";
 const KnowledgeAndNews = () => {
   return (
     <>
-      <h3>ZNANJE IN NOVOSTI</h3>
+      {/* <h3>ZNANJE IN NOVOSTI</h3> */}
       <BlogGrid>
         <BlogCard />
         <BlogCard />
