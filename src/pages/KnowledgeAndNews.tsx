@@ -1,5 +1,6 @@
 import BlogCard from "../components/blog/BlogCard";
 import { blogs } from "../utils";
+import Pagination from "../components/common/Pagination";
 
 const KnowledgeAndNews = () => {
   return (
@@ -26,6 +27,7 @@ const KnowledgeAndNews = () => {
             />
           ))}
         </div>
+        <Pagination />
       </div>
     </>
   );
