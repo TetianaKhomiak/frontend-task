@@ -9,8 +9,8 @@ import NetworkStatusIcon from "../../../assets/icons/ui/network-status.svg";
 
 const FooterTop = () => {
   return (
-    <div className="flex flex-col max-w-[1216px] mx-auto gap-20">
-      <div className="flex gap-30">
+    <div className="flex flex-col w-full max-w-[1216px] mx-auto gap-20">
+      <div className="flex w-full gap-35">
         <img
           src={Logo}
           alt="Žabec Company Logo"
@@ -47,7 +47,7 @@ const FooterTop = () => {
           </p>
         </div>
       </div>
-      <div className="flex gap-30">
+      <div className="flex w-full gap-15">
         <div className="flex gap-5 self-center">
           <img
             src={FacebookIcon}
@@ -65,23 +65,23 @@ const FooterTop = () => {
             className="w-[32px] h-[32px]"
           />
         </div>
-        <div className="flex flex-col items-center gap-4 text-[14px] font-(family-name:--font-anonymous)">
+        <div className="w-[270px] flex flex-col items-center gap-4 text-[14px] font-(family-name:--font-anonymous)">
           <p className="uppercase font-bold">Telefonska podpora</p>
-          <div>
+          <div className="flex flex-col items-center">
             <p className="uppercase font-normal">01 / 600 10 50</p>
             <p className="font-normal">Delovniki: 8:00-20:00</p>
           </div>
         </div>
-        <div className="flex flex-col items-center gap-4 text-[14px] font-(family-name:--font-anonymous)">
+        <div className="w-[270px] flex flex-col items-center gap-4 text-[14px] font-(family-name:--font-anonymous)">
           <p className="uppercase font-bold">TPodpora po e-pošti</p>
-          <div>
+          <div className="flex flex-col items-center">
             <a href="mailto:info@zabec.net" className="font-normal underline">
               info@zabec.net
             </a>
             <p className="font-normal">Non-stop 24/7</p>
           </div>
         </div>
-        <div className="flex flex-col items-center gap-4">
+        <div className="w-[270px] flex flex-col items-center gap-4">
           <p className="uppercase text-[14px] font-(family-name:--font-anonymous) font-bold">
             Stanje omrežja
           </p>
