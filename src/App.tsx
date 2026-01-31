@@ -6,6 +6,7 @@ import Hosting from "./pages/Hosting";
 import WordPress from "./pages/WordPress";
 import OnlineStores from "./pages/OnlineStores";
 import VpsHosting from "./pages/VpsHosting";
+import Footer from "./components/layout/footer/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/vpshosting" element={<VpsHosting />} />
         <Route path="/*" element={<KnowledgeAndNews />} />
       </Routes>
+      <Footer />
     </>
   );
 }

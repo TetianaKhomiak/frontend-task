@@ -12,7 +12,9 @@ const BlogCard = ({
 }: BlogCardProps) => {
   return (
     <div className="flex flex-col">
-      <img src={image} alt={title} />
+      <Link to="#">
+        <img src={image} alt={title} />
+      </Link>
 
       <div className="p-4 flex flex-col flex-1">
         <p className="font-(family-name:--font-anonymous) font-normal text-[14px]">
