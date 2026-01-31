@@ -12,7 +12,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="w-full flex justify-between font-montserrat font-extrabold text-sm">
+    <div className="w-full flex justify-between font-(family-name:--font-montserrat) font-extrabold text-sm">
       {links.map((link) => (
         <NavLink
           key={link.to}
