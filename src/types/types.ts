@@ -28,3 +28,8 @@ export interface BlogCardProps {
   text: string;
   buttonText: string;
 }
+
+export interface BlogDownloadCardProps {
+  text: string;
+  size: string;
+}

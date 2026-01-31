@@ -7,6 +7,7 @@ import WordPress from "./pages/WordPress";
 import OnlineStores from "./pages/OnlineStores";
 import VpsHosting from "./pages/VpsHosting";
 import Footer from "./components/layout/footer/Footer";
+import BlogPostPage from "./components/blog/BlogPostPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/onlinestores" element={<OnlineStores />} />
         <Route path="/vpshosting" element={<VpsHosting />} />
         <Route path="/*" element={<KnowledgeAndNews />} />
+        <Route path="/blog" element={<BlogPostPage />} />
       </Routes>
       <Footer />
     </>
