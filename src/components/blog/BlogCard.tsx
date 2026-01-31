@@ -20,9 +20,9 @@ const BlogCard = ({
         <p className="font-(family-name:--font-anonymous) font-normal text-[14px]">
           {author} | {date}
         </p>
-        <h3 className="mt-2 font-(family-name:--font-montserrat) font-black text-[#6CB63F] text-[16px]">
+        <h2 className="mt-2 font-(family-name:--font-montserrat) font-black text-[#6CB63F] text-[16px]">
           {title}
-        </h3>
+        </h2>
         <p className="mt-2 flex-1 font-(family-name:--font-anonymous) font-normal text-[16px]">
           {text}
         </p>

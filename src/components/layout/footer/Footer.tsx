@@ -3,7 +3,7 @@ import FooterBottom from "./FooterBottom";
 
 const Footer = () => {
   return (
-    <div className="bg-[#ECF3ED] flex flex-col py-20">
+    <div className="flex flex-col">
       <FooterTop />
       <FooterBottom />
     </div>
