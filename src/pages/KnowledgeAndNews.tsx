@@ -1,6 +1,6 @@
 import BlogCard from "../components/blog/BlogCard";
-import { blogs } from "../utils";
 import Pagination from "../components/common/Pagination";
+import { blogs } from "../utils";
 
 const KnowledgeAndNews = () => {
   return (

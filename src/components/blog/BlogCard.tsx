@@ -1,6 +1,6 @@
-import type { BlogCardProps } from "../../types/types";
-import ArrowIcon from "../../assets/icons/ui/arrow-right.png";
 import { Link } from "react-router-dom";
+import ArrowIcon from "../../assets/icons/ui/arrow-right.png";
+import type { BlogCardProps } from "../../types/types";
 
 const BlogCard = ({
   image,

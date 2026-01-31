@@ -1,5 +1,5 @@
-import { useCountdown } from "./useCountdown";
 import type { Props } from "../../../types/types";
+import { useCountdown } from "./useCountdown";
 
 export function CountdownTimer({ targetDate }: Props) {
   const { days, hours, minutes, seconds, isFinished } =

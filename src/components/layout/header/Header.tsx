@@ -1,13 +1,13 @@
-import Banner from "./Banner";
-import TopBar from "./TopBar";
-import Navbar from "./Navbar";
 import Logo from "../../../assets/images/logo.png";
+import Banner from "./Banner";
+import Navbar from "./Navbar";
+import TopBar from "./TopBar";
 
 const Header = () => {
   return (
     <header>
       <Banner />
-      <div className="max-w-[1216px] mx-auto py-5 flex justify-between items-center">
+      <div className="max-w-[1216px] mx-auto py-5 flex gap-25 items-center">
         <img
           src={Logo}
           alt="Žabec Company Logo"

@@ -1,11 +1,11 @@
-import Logo from "../../../assets/images/logo.png";
+import FacebookIcon from "../../../assets/icons/social/facebook.png";
+import LinkedinIcon from "../../../assets/icons/social/linkedin.png";
+import TwitterIcon from "../../../assets/icons/social/twitter.png";
+import Location from "../../../assets/icons/ui/location.svg";
+import NetworkStatus from "../../../assets/icons/ui/network-status.svg";
 import ShieldStandard from "../../../assets/icons/ui/shield-standard.svg";
 import Tap from "../../../assets/icons/ui/tap.svg";
-import Location from "../../../assets/icons/ui/location.svg";
-import FacebookIcon from "../../../assets/icons/social/facebook.png";
-import TwitterIcon from "../../../assets/icons/social/twitter.png";
-import LinkedinIcon from "../../../assets/icons/social/linkedin.png";
-import NetworkStatusIcon from "../../../assets/icons/ui/network-status.svg";
+import Logo from "../../../assets/images/logo.png";
 
 const FooterTop = () => {
   return (
@@ -50,26 +50,34 @@ const FooterTop = () => {
         </div>
         <div className="flex w-full gap-15">
           <div className="flex gap-5 self-center">
-            <img
-              src={FacebookIcon}
-              alt="FacebookIcon"
-              className="w-[32px] h-[32px]"
-            />
-            <img
-              src={TwitterIcon}
-              alt="TwitterIcon"
-              className="w-[32px] h-[32px]"
-            />
-            <img
-              src={LinkedinIcon}
-              alt="LinkedinIcon"
-              className="w-[32px] h-[32px]"
-            />
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img
+                src={FacebookIcon}
+                alt="FacebookIcon"
+                className="w-[32px] h-[32px]"
+              />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img
+                src={TwitterIcon}
+                alt="TwitterIcon"
+                className="w-[32px] h-[32px]"
+              />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img
+                src={LinkedinIcon}
+                alt="LinkedinIcon"
+                className="w-[32px] h-[32px]"
+              />
+            </a>
           </div>
           <div className="w-[270px] flex flex-col items-center gap-4 text-[14px] font-(family-name:--font-anonymous)">
             <p className="uppercase font-bold">Telefonska podpora</p>
             <div className="flex flex-col items-center">
-              <p className="uppercase font-normal">01 / 600 10 50</p>
+              <p className="uppercase font-normal">
+                01 / <a href="tel:6001050">600 10 50</a>
+              </p>
               <p className="font-normal">Delovniki: 8:00-20:00</p>
             </div>
           </div>
@@ -87,7 +95,7 @@ const FooterTop = () => {
               Stanje omrežja
             </p>
             <img
-              src={NetworkStatusIcon}
+              src={NetworkStatus}
               alt="Stanje omrežja"
               className="w-[32px] h-[32px]"
             />
