@@ -32,4 +32,7 @@ export interface BlogCardProps {
 export interface BlogDownloadCardProps {
   text: string;
   size: string;
+  width?: string;
+  justify?: "start" | "center";
+  textFullWidth?: boolean;
 }

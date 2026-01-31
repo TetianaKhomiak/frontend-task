@@ -154,6 +154,25 @@ const BlogPostPage = () => {
               .
             </p>
           </div>
+
+          <div className="flex flex-col gap-5 pb-8">
+            <h3 className="font-black font-(family-name:--font-montserrat) text-[16px]">
+              Posodobitev WordPressa
+            </h3>
+            <p>
+              Uporabljajte vedno zadnjo (<strong>najnovejšo različico</strong>)
+              WordPress jedra, teme in vtičnikov. To lahko naredite tako, da pod
+              WordPress Updates preverite ali vam je na voljo kakšna posodobitev
+              in na kateri različici se nahajate sedaj.
+            </p>
+            <BlogUploadCard
+              text="Kako posodobiti WordPress - Navodila"
+              size="WORD, 116 mb"
+              width="w-full"
+              justify="start"
+              textFullWidth={true}
+            />
+          </div>
         </div>
       </div>
     </div>
