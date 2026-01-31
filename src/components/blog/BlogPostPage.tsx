@@ -8,7 +8,7 @@ const BlogPostPage = () => {
         Vzdrževanje WordPress Spletne Strani
       </h1>
 
-      <div className="w-full bg-white bg-[radial-gradient(#d1d5db_1px,transparent_1px)] bg-[length:16px_16px]">
+      <div className="w-full bg-white bg-[radial-gradient(#d1d5db_1px,transparent_1px)] bg-[length:16px_16px] pb-22">
         <div className="max-w-[800px] m-auto text-[16px] font-(family-name:--font-anonymous) font-normal">
           <div className="flex flex-col gap-5 py-10">
             <p>
@@ -44,6 +44,7 @@ const BlogPostPage = () => {
               , vzdrževanje pa bo opravljeno <strong>vsak mesec!</strong>
             </p>
           </div>
+
           <div className="flex flex-col gap-3 pb-8">
             <h2 className="text-[#002A00] font-black font-(family-name:--font-montserrat) text-[24px]">
               10 osnovnih nalog vzdrževanja WordPress spletne strani
@@ -52,6 +53,7 @@ const BlogPostPage = () => {
               Oglejmo si osnovne naloge vzdrževanja in kako jih najlažje
               izvedete.
             </p>
+
             <div className="max-w-[700px] flex justify-between text-[16px] font-(family-name:--font-anonymous) font-normal">
               <ol className="list-decimal pl-6">
                 <li>Sprememba gesel</li>
@@ -69,6 +71,7 @@ const BlogPostPage = () => {
               </ol>
             </div>
           </div>
+
           <div className="flex flex-col gap-5 pb-8">
             <h3 className="font-black font-(family-name:--font-montserrat) text-[16px]">
               Sprememba gesel
@@ -172,6 +175,60 @@ const BlogPostPage = () => {
               justify="start"
               textFullWidth={true}
             />
+          </div>
+
+          <div className="flex flex-col gap-5 pb-8">
+            <h3 className="font-black font-(family-name:--font-montserrat) text-[16px]">
+              Optimizacija slik
+            </h3>
+            <p>
+              Optimizacija slik je izjemno pomembna tudi{" "}
+              <strong>zaradi hitrosti vaše spletne strani</strong>, namreč slike
+              se nalagajo dlje časa kot sam tekst. Pomembno je, da na stran oz.
+              v administracijo naložite že optimizirane slike (saj bodo
+              prevelike slike obremenjevale tudi vašo WordPress administracijo).
+            </p>
+            <p>
+              Naši WordPress strokovnjaki so pripravili{" "}
+              <strong>
+                e-vodič 25 nasvetov kako izboljšati hitrost WordPress spletne
+                strani
+              </strong>
+              . Vodič vam je na voljo{" "}
+              <Link
+                to="#"
+                className="text-[#6CB63F] underline decoration-[#6CB63F] font-bold">
+                tukaj
+              </Link>
+              .
+            </p>
+            <strong>
+              Priporočamo, da imate slike v .png (ali .svg) obliki.
+            </strong>
+            <p>
+              .png oblika je v samem začetku ne-stisnjena, vendar ko jo
+              stisnemo, slika sicer izgubi nekaj informacij, vendar še vedno
+              ostane dovolj kvalitetna. Če imate enostavnejše slike, torej ne
+              postavljate dizajnerske ali fotografske strani (v tem primeru vam
+              priporočamo obliko .jpg), ali potrebujete transparentno sliko,
+              potem je .png prava izbira.
+            </p>
+            <strong>
+              Kako stisnemo slike brez da bi izgubili celotno kvaliteto?{" "}
+            </strong>
+            <p>
+              Uporabimo lahko različna orodja:
+              <ul className="list-disc pl-6 text-[16px] font-(family-name:--font-anonymous)">
+                <li>Adobe Photoshop</li>
+                <li>GIMP</li>
+                <li>Bulk Resize Photos</li>
+                <li>ImageOptim (za Mac) ali Trimage (za Windows)</li>
+                <li>
+                  Za optimizacijo slik pa lahko uporabite tudi vtičnik Smush
+                  Image Compression and Optimization.
+                </li>
+              </ul>
+            </p>
           </div>
         </div>
       </div>
