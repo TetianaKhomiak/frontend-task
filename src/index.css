@@ -1,3 +1,7 @@
+@import "tailwindcss";
+
+@config "../tailwind.config.js";
+
 @font-face {
     font-family: "Anonymous Pro";
     src: url("./assets/fonts/anonymouspro-2o73w-webfont.woff2") format("woff2");

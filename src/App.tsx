@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import BlogPostPage from "./components/blog/BlogPostPage";
 import Footer from "./components/layout/footer/Footer";
 import Header from "./components/layout/header/Header";
 import { useAutoScrollOnRouteChange } from "./hooks/useAutoScrollOnRouteChange";
@@ -9,6 +8,7 @@ import KnowledgeAndNews from "./pages/KnowledgeAndNews";
 import OnlineStores from "./pages/OnlineStores";
 import VpsHosting from "./pages/VpsHosting";
 import WordPress from "./pages/WordPress";
+import BlogPost from "./pages/BlogPost";
 import type { RouteConfig } from "./types";
 
 const routes: RouteConfig[] = [
@@ -18,7 +18,7 @@ const routes: RouteConfig[] = [
   { path: "/wordpress", element: <WordPress /> },
   { path: "/onlinestores", element: <OnlineStores /> },
   { path: "/vpshosting", element: <VpsHosting /> },
-  { path: "/blog", element: <BlogPostPage /> },
+  { path: "/blog", element: <BlogPost /> },
 ];
 
 function App() {

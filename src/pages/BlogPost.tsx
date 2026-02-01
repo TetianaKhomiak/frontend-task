@@ -1,81 +1,20 @@
 import { Link } from "react-router-dom";
-import BlogUploadCard from "../common/BlogDownloadCard";
+import BlogUploadCard from "../components/common/BlogDownloadCard";
+import { BlogPostIntro, TasksList, BlogSection } from "../components/blog";
 
-const BlogPostPage = () => {
+const BlogPost = () => {
   return (
-    <div className="bg-[#ECF3ED]">
-      <h1 className="font-(family-name:--font-montserrat) text-[32px] font-black max-w-[800px] m-auto py-20">
+    <div className="bg-[#ECF3ED] dark:bg-gray-800">
+      <h1 className="font-(family-name:--font-montserrat) text-[32px] dark:text-white font-black max-w-[800px] m-auto py-20">
         Vzdrževanje WordPress Spletne Strani
       </h1>
 
-      <div className="w-full bg-white bg-[radial-gradient(#d1d5db_1px,transparent_1px)] bg-[length:16px_16px] pb-22">
-        <div className="max-w-[800px] m-auto text-[16px] font-(family-name:--font-anonymous) font-normal">
-          <div className="flex flex-col gap-5 py-10">
-            <p>
-              <strong>
-                Kaj vse je potrebno narediti na WordPress spletni strani, da ta
-                ostane agilna, varna in ažurna?
-              </strong>{" "}
-              Če boste vzdrževanje opravljali redno, vam bo le-to vzelo malo
-              časa, v »zahvalo« pa bo vaša spletna stran visoko zmogljiva.
-            </p>
-            <p>
-              Najprej pa se nam pojavi vprašanje, kaj je to redno? Predlagamo
-              vam, da naredite celoten pregled WordPress spletne strani{" "}
-              <strong>vsaj na tri mesece.</strong> Odpravo varnostnih lukenj pa
-              predlagamo takoj, ko se pojavijo.
-            </p>
-            <p>
-              Če menite, da tega znanja nimate in da boste vzdrževanje težko
-              opravili sami ali samo enostavno nimate časa, potem vam je tukaj
-              lahko v pomoč naša WordPress tehnična podpora.{" "}
-              <Link to="#" className="font-bold">
-                Zabec.net{" "}
-              </Link>{" "}
-              vam namreč ponuja poseben{" "}
-              <strong>
-                paket vzdrževanja WordPress spletnih strani, paket Lokvanj –
-              </strong>{" "}
-              <Link
-                to="#"
-                className="text-[#6CB63F] underline decoration-[#6CB63F] font-bold">
-                Več
-              </Link>
-              , vzdrževanje pa bo opravljeno <strong>vsak mesec!</strong>
-            </p>
-          </div>
+      <div className="w-full bg-white dark:bg-gray-800 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] dark:bg-[radial-gradient(#4b5563_1px,transparent_1px)] bg-[length:16px_16px] pb-22">
+        <div className="max-w-[800px] m-auto text-base dark:text-gray-100 font-(family-name:--font-anonymous) font-normal">
+          <BlogPostIntro />
+          <TasksList />
 
-          <div className="flex flex-col gap-3 pb-8">
-            <h2 className="text-[#002A00] font-black font-(family-name:--font-montserrat) text-[24px]">
-              10 osnovnih nalog vzdrževanja WordPress spletne strani
-            </h2>
-            <p className="text-[16px] font-(family-name:--font-anonymous) font-normal">
-              Oglejmo si osnovne naloge vzdrževanja in kako jih najlažje
-              izvedete.
-            </p>
-
-            <div className="max-w-[700px] flex justify-between text-[16px] font-(family-name:--font-anonymous) font-normal">
-              <ol className="list-decimal pl-6">
-                <li>Sprememba gesel</li>
-                <li>Varnostna kopija spletne strani</li>
-                <li>Posodobitev WordPressa</li>
-                <li>Pregled in brisanje vsiljivih komentarjev</li>
-                <li>Testiranje obrazcev</li>
-              </ol>
-              <ol className="list-decimal pl-6" start={6}>
-                <li>Optimizacija podatkovne baze</li>
-                <li>Ureditev 404 napak</li>
-                <li>Ureditev zlomljenih povezav</li>
-                <li>Optimizacija slik</li>
-                <li>Pregled WordPress vpisov</li>
-              </ol>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-5 pb-8">
-            <h3 className="font-black font-(family-name:--font-montserrat) text-[16px]">
-              Sprememba gesel
-            </h3>
+          <BlogSection title="Sprememba gesel">
             <p>
               Gesla so vaša prva obrambna linija, boljše ko bo geslo, težje ga
               bo ugotoviti. Predlagamo, da geslo vsebuje
@@ -101,12 +40,9 @@ const BlogPostPage = () => {
               </Link>
               .
             </p>
-          </div>
+          </BlogSection>
 
-          <div className="flex flex-col gap-5 pb-8">
-            <h3 className="font-black font-(family-name:--font-montserrat) text-[16px]">
-              Varnostna kopija spletne strani
-            </h3>
+          <BlogSection title="Varnostna kopija spletne strani">
             <p>
               Varnostna kopija je tudi pri vzdrževanju
               <strong> najpomembnejša stvar,</strong> kajti tudi pri vzdrževanju
@@ -156,12 +92,9 @@ const BlogPostPage = () => {
               </Link>
               .
             </p>
-          </div>
+          </BlogSection>
 
-          <div className="flex flex-col gap-5 pb-8">
-            <h3 className="font-black font-(family-name:--font-montserrat) text-[16px]">
-              Posodobitev WordPressa
-            </h3>
+          <BlogSection title="Posodobitev WordPressa">
             <p>
               Uporabljajte vedno zadnjo (<strong>najnovejšo različico</strong>)
               WordPress jedra, teme in vtičnikov. To lahko naredite tako, da pod
@@ -175,12 +108,9 @@ const BlogPostPage = () => {
               justify="start"
               textFullWidth={true}
             />
-          </div>
+          </BlogSection>
 
-          <div className="flex flex-col gap-5 pb-8">
-            <h3 className="font-black font-(family-name:--font-montserrat) text-[16px]">
-              Optimizacija slik
-            </h3>
+          <BlogSection title="Optimizacija slik">
             <p>
               Optimizacija slik je izjemno pomembna tudi{" "}
               <strong>zaradi hitrosti vaše spletne strani</strong>, namreč slike
@@ -218,7 +148,7 @@ const BlogPostPage = () => {
             </strong>
             <p>
               Uporabimo lahko različna orodja:
-              <ul className="list-disc pl-6 text-[16px] font-(family-name:--font-anonymous)">
+              <ul className="list-disc pl-6 text-base font-(family-name:--font-anonymous)">
                 <li>Adobe Photoshop</li>
                 <li>GIMP</li>
                 <li>Bulk Resize Photos</li>
@@ -229,11 +159,11 @@ const BlogPostPage = () => {
                 </li>
               </ul>
             </p>
-          </div>
+          </BlogSection>
         </div>
       </div>
     </div>
   );
 };
 
-export default BlogPostPage;
+export default BlogPost;

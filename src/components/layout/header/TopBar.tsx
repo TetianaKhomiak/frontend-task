@@ -8,13 +8,11 @@ const TopBar = () => {
   const { theme, toggleTheme } = useThemeContext();
 
   return (
-    <div className="w-full flex justify-between items-center text-[14px] font-(family-name:--font-anonymous) font-bold bg-white dark:bg-gray-900 text-black dark:text-white px-4 py-2">
+    <div className="w-full flex justify-between items-center text-[14px] font-(family-name:--font-anonymous) font-bold bg-white dark:bg-gray-900 text-black dark:text-white py-2">
       <div className="flex flex-col">
         <p className="text-[12px]">Non-stop 24/7</p>
         <address className="not-italic">
-          <a
-            href="mailto:podpora@zabec.net"
-            className="underline dark:text-gray-300">
+          <a href="mailto:podpora@zabec.net" className="dark:text-gray-300">
             podpora@zabec.net
           </a>
         </address>
@@ -23,7 +21,7 @@ const TopBar = () => {
       <div className="flex flex-col">
         <p className="text-[12px]">Delovniki 8:00-20:00</p>
         <address className="not-italic">
-          <a href="tel:040333666" className="underline dark:text-gray-300">
+          <a href="tel:040333666" className="dark:text-gray-300">
             040 333 666
           </a>
         </address>
