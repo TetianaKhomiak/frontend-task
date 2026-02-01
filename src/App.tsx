@@ -12,13 +12,13 @@ import WordPress from "./pages/WordPress";
 import type { RouteConfig } from "./types";
 
 const routes: RouteConfig[] = [
+  { path: "/", element: <KnowledgeAndNews /> },
   { path: "/hosting", element: <Hosting /> },
   { path: "/domains", element: <Domains /> },
   { path: "/wordpress", element: <WordPress /> },
   { path: "/onlinestores", element: <OnlineStores /> },
   { path: "/vpshosting", element: <VpsHosting /> },
   { path: "/blog", element: <BlogPostPage /> },
-  { path: "/*", element: <KnowledgeAndNews /> },
 ];
 
 function App() {

@@ -12,21 +12,15 @@ const Navbar = () => {
     { name: "WORDPRESS", to: "/wordpress" },
     { name: "SPLETNE TRGOVINE", to: "/onlinestores" },
     { name: "VPS GOSTOVANJE", to: "/vpshosting" },
-    { name: "ZNANJE IN NOVOSTI", to: "/*" },
+    { name: "ZNANJE IN NOVOSTI", to: "/" },
   ];
 
   return (
     <div className="w-full max-w-[906px] flex justify-between font-(family-name:--font-montserrat) font-extrabold text-sm">
       {links.map((link, index) => (
-        <NavLink className="relative pb-1" key={link.to} to={link.to}>
+        <NavLink key={link.to} to={link.to} className="relative">
           {({ isActive }) => {
-            let underlineOpacity = 0;
-            if (isActive) {
-              underlineOpacity =
-                hoveredIndex !== null && hoveredIndex !== index ? 50 : 100;
-            } else if (hoveredIndex === index) {
-              underlineOpacity = 100;
-            }
+            const isVisible = isActive || hoveredIndex === index;
 
             return (
               <div
@@ -38,7 +32,9 @@ const Navbar = () => {
                 <img
                   src={underlineIcon}
                   alt="underline"
-                  className={`absolute top-11 w-full h-1 object-contain transition-opacity duration-500 opacity-${underlineOpacity}`}
+                  className={`absolute top-11 w-full h-1 object-contain transition-opacity duration-300
+                    ${isVisible ? "opacity-100" : "opacity-0"}
+                  `}
                 />
               </div>
             );
