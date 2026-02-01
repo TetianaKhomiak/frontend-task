@@ -6,6 +6,31 @@ import NetworkStatus from "../../../assets/icons/ui/network-status.svg";
 import ShieldStandard from "../../../assets/icons/ui/shield-standard.svg";
 import Tap from "../../../assets/icons/ui/tap.svg";
 import Logo from "../../../assets/images/logo.png";
+import type { FooterFeature, SocialLink } from "../../../types";
+
+const FOOTER_FEATURES: FooterFeature[] = [
+  {
+    icon: ShieldStandard,
+    alt: "Najvišji standardi varnosti",
+    text: "Najvišji standardi varnosti",
+  },
+  { icon: Tap, alt: "Zadovoljni uporabniki", text: "Zadovoljni uporabniki" },
+  {
+    icon: Location,
+    alt: "Slovenski ponudnik gostovanja",
+    text: "Slovenski ponudnik gostovanja",
+  },
+];
+
+const SOCIAL_LINKS: SocialLink[] = [
+  { icon: FacebookIcon, alt: "Facebook", href: "#" },
+  { icon: TwitterIcon, alt: "Twitter", href: "#" },
+  {
+    icon: LinkedinIcon,
+    alt: "LinkedIn",
+    href: "#",
+  },
+];
 
 const FooterTop = () => {
   return (
@@ -17,62 +42,32 @@ const FooterTop = () => {
             alt="Žabec Company Logo"
             className="w-[88px] h-[88px]"
           />
-          <div className="flex flex-col items-center gap-4">
-            <img
-              src={ShieldStandard}
-              alt="Najvišji standardi varnosti"
-              className="w-[80px] h-[80px]"
-            />
-            <p className="text-[14px] font-(family-name:--font-anonymous) font-bold">
-              Najvišji standardi varnosti
-            </p>
-          </div>
-          <div className="flex flex-col items-center gap-4">
-            <img
-              src={Tap}
-              alt="Zadovoljni uporabniki"
-              className="w-[80px] h-[80px]"
-            />
-            <p className="text-[14px] font-(family-name:--font-anonymous) font-bold">
-              Zadovoljni uporabniki
-            </p>
-          </div>
-          <div className="flex flex-col items-center gap-4">
-            <img
-              src={Location}
-              alt="Slovenski ponudnik gostovanja"
-              className="w-[80px] h-[80px]"
-            />
-            <p className="text-[14px] font-(family-name:--font-anonymous) font-bold">
-              Slovenski ponudnik gostovanja
-            </p>
-          </div>
+          {FOOTER_FEATURES.map((feature) => (
+            <div key={feature.alt} className="flex flex-col items-center gap-4">
+              <img
+                src={feature.icon}
+                alt={feature.alt}
+                className="w-[80px] h-[80px]"
+              />
+              <p className="text-sm font-(family-name:--font-anonymous) font-bold">
+                {feature.text}
+              </p>
+            </div>
+          ))}
         </div>
         <div className="flex w-full gap-15">
           <div className="flex gap-5 self-center">
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <img
-                src={FacebookIcon}
-                alt="FacebookIcon"
-                className="w-[32px] h-[32px]"
-              />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <img
-                src={TwitterIcon}
-                alt="TwitterIcon"
-                className="w-[32px] h-[32px]"
-              />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <img
-                src={LinkedinIcon}
-                alt="LinkedinIcon"
-                className="w-[32px] h-[32px]"
-              />
-            </a>
+            {SOCIAL_LINKS.map((link) => (
+              <a
+                key={link.alt}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer">
+                <img src={link.icon} alt={link.alt} className="w-8 h-8" />
+              </a>
+            ))}
           </div>
-          <div className="w-[270px] flex flex-col items-center gap-4 text-[14px] font-(family-name:--font-anonymous)">
+          <div className="w-[270px] flex flex-col items-center gap-4 text-sm font-(family-name:--font-anonymous)">
             <p className="uppercase font-bold">Telefonska podpora</p>
             <div className="flex flex-col items-center">
               <p className="uppercase font-normal">
@@ -81,7 +76,7 @@ const FooterTop = () => {
               <p className="font-normal">Delovniki: 8:00-20:00</p>
             </div>
           </div>
-          <div className="w-[270px] flex flex-col items-center gap-4 text-[14px] font-(family-name:--font-anonymous)">
+          <div className="w-[270px] flex flex-col items-center gap-4 text-sm font-(family-name:--font-anonymous)">
             <p className="uppercase font-bold">TPodpora po e-pošti</p>
             <div className="flex flex-col items-center">
               <a href="mailto:info@zabec.net" className="font-normal underline">
@@ -94,11 +89,7 @@ const FooterTop = () => {
             <p className="uppercase text-[14px] font-(family-name:--font-anonymous) font-bold">
               Stanje omrežja
             </p>
-            <img
-              src={NetworkStatus}
-              alt="Stanje omrežja"
-              className="w-[32px] h-[32px]"
-            />
+            <img src={NetworkStatus} alt="Stanje omrežja" className="w-8 h-8" />
           </div>
         </div>
       </div>

@@ -1,26 +1,36 @@
+import { Route, Routes } from "react-router-dom";
+import BlogPostPage from "./components/blog/BlogPostPage";
+import Footer from "./components/layout/footer/Footer";
 import Header from "./components/layout/header/Header";
-import { Routes, Route } from "react-router-dom";
-import KnowledgeAndNews from "./pages/KnowledgeAndNews";
+import { useAutoScrollOnRouteChange } from "./hooks/useAutoScrollOnRouteChange";
 import Domains from "./pages/Domains";
 import Hosting from "./pages/Hosting";
-import WordPress from "./pages/WordPress";
+import KnowledgeAndNews from "./pages/KnowledgeAndNews";
 import OnlineStores from "./pages/OnlineStores";
 import VpsHosting from "./pages/VpsHosting";
-import Footer from "./components/layout/footer/Footer";
-import BlogPostPage from "./components/blog/BlogPostPage";
+import WordPress from "./pages/WordPress";
+import type { RouteConfig } from "./types";
+
+const routes: RouteConfig[] = [
+  { path: "/hosting", element: <Hosting /> },
+  { path: "/domains", element: <Domains /> },
+  { path: "/wordpress", element: <WordPress /> },
+  { path: "/onlinestores", element: <OnlineStores /> },
+  { path: "/vpshosting", element: <VpsHosting /> },
+  { path: "/blog", element: <BlogPostPage /> },
+  { path: "/*", element: <KnowledgeAndNews /> },
+];
 
 function App() {
+  useAutoScrollOnRouteChange();
+
   return (
     <>
       <Header />
       <Routes>
-        <Route path="/hosting" element={<Hosting />} />
-        <Route path="/domains" element={<Domains />} />
-        <Route path="/wordpress" element={<WordPress />} />
-        <Route path="/onlinestores" element={<OnlineStores />} />
-        <Route path="/vpshosting" element={<VpsHosting />} />
-        <Route path="/*" element={<KnowledgeAndNews />} />
-        <Route path="/blog" element={<BlogPostPage />} />
+        {routes.map(({ path, element }) => (
+          <Route key={path} path={path} element={element} />
+        ))}
       </Routes>
       <Footer />
     </>

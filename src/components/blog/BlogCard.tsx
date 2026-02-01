@@ -1,6 +1,14 @@
 import { NavLink } from "react-router-dom";
 import ArrowIcon from "../../assets/icons/ui/arrow-right.png";
-import type { BlogCardProps } from "../../types/types";
+
+interface BlogCardProps {
+  image: string;
+  author: string;
+  date: string;
+  title: string;
+  text: string;
+  buttonText: string;
+}
 
 const BlogCard = ({
   image,

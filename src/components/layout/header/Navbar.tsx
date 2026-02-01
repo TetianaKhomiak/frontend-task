@@ -1,10 +1,9 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import underlineIcon from "../../../assets/icons/ui/hover-underline.png";
+import type { NavigationLink } from "../../../types";
 
 const Navbar = () => {
-  const location = useLocation();
-
-  const links = [
+  const links: NavigationLink[] = [
     { name: "DOMENE", to: "/domains" },
     { name: "GOSTOVANJE", to: "/hosting" },
     { name: "WORDPRESS", to: "/wordpress" },
@@ -14,19 +13,13 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="w-full max-w-[906px] flex gap-8 font-(family-name:--font-montserrat) font-extrabold text-sm pl-4">
-      {links.map((link) => {
-        const isActive =
-          link.to === "/*"
-            ? location.pathname.startsWith("/blog") ||
-              location.pathname === "/*"
-            : location.pathname === link.to;
-
-        return (
-          <NavLink
-            key={link.to}
-            to={link.to}
-            className="relative flex flex-col items-center pb-1">
+    <div className="w-full max-w-[906px] flex justify-between font-(family-name:--font-montserrat) font-extrabold text-sm">
+      {links.map((link) => (
+        <NavLink
+          key={link.to}
+          to={link.to}
+          className="relative flex flex-col items-center pb-1">
+          {({ isActive }) => (
             <>
               <span>{link.name}</span>
               {isActive && (
@@ -37,9 +30,9 @@ const Navbar = () => {
                 />
               )}
             </>
-          </NavLink>
-        );
-      })}
+          )}
+        </NavLink>
+      ))}
     </div>
   );
 };

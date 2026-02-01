@@ -1,13 +1,15 @@
-import type { Blog } from "./types/types";
-import blog1 from "./assets/images/blog-001.png";
-import blog2 from "./assets/images/blog-002.png";
-import blog3 from "./assets/images/blog-003.png";
-import blog4 from "./assets/images/blog-004.png";
-import blog5 from "./assets/images/blog-005.png";
-import blog6 from "./assets/images/blog-006.png";
-import blog7 from "./assets/images/blog-007.png";
-import blog8 from "./assets/images/blog-008.png";
-import blog9 from "./assets/images/blog-009.png";
+import type { Blog } from "../types";
+import {
+  blog1,
+  blog2,
+  blog3,
+  blog4,
+  blog5,
+  blog6,
+  blog7,
+  blog8,
+  blog9,
+} from "../assets/images";
 
 export const blogs: Blog[] = [
   {

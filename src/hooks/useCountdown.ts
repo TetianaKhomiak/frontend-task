@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import type { Countdown } from "../../../types/types";
+import { useCallback, useEffect, useState } from "react";
+import type { Countdown } from "../types";
 
-export function useCountdown(targetDate: Date): Countdown {
-  const calculateTimeLeft = () => {
+export function useCountdown(promotionEndDate: Date): Countdown {
+  const calculateTimeLeft = useCallback((): Countdown => {
     const now = Date.now();
-    const diff = targetDate.getTime() - now;
+    const diff = promotionEndDate.getTime() - now;
 
     if (diff <= 0) {
       return { days: 0, hours: 0, minutes: 0, seconds: 0, isFinished: true };
@@ -16,14 +16,14 @@ export function useCountdown(targetDate: Date): Countdown {
     const seconds = Math.floor((diff / 1000) % 60);
 
     return { days, hours, minutes, seconds, isFinished: false };
-  };
+  }, [promotionEndDate]);
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft);
+  const [timeLeft, setTimeLeft] = useState<Countdown>(calculateTimeLeft);
 
   useEffect(() => {
     const interval = setInterval(() => setTimeLeft(calculateTimeLeft()), 1000);
     return () => clearInterval(interval);
-  }, [targetDate]);
+  }, [calculateTimeLeft]);
 
   return timeLeft;
 }

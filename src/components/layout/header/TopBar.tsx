@@ -1,25 +1,11 @@
-import { useEffect } from "react";
-import { useLocalStorage } from "usehooks-ts";
 import UserIcon from "../../../assets/icons/ui/user.svg";
 import NetworkStatusIcon from "../../../assets/icons/ui/network-status.svg";
 import CartIcon from "../../../assets/icons/ui/cart.svg";
 import { Link } from "react-router-dom";
+import { useTheme } from "../../../hooks/useTheme";
 
 const TopBar = () => {
-  const [theme, setTheme] = useLocalStorage<"light" | "dark">("theme", "light");
-
-  const toggleDarkMode = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-    if (theme === "dark") {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
-  }, [theme]);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <div className="w-full flex justify-between items-center text-[14px] font-(family-name:--font-anonymous) font-bold bg-white dark:bg-gray-900 text-black dark:text-white px-4 py-2">
@@ -64,7 +50,7 @@ const TopBar = () => {
 
       <button
         type="button"
-        onClick={toggleDarkMode}
+        onClick={toggleTheme}
         className="w-[110px] cursor-pointer">
         {theme === "light" ? "Nočni način" : "Svetel način"}
       </button>

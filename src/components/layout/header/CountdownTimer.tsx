@@ -1,9 +1,12 @@
-import type { Props } from "../../../types/types";
-import { useCountdown } from "./useCountdown";
+import { useCountdown } from "../../../hooks/useCountdown";
 
-export function CountdownTimer({ targetDate }: Props) {
+export type CountdownTimerProps = {
+  promotionEndDate: Date;
+};
+
+export function CountdownTimer({ promotionEndDate }: CountdownTimerProps) {
   const { days, hours, minutes, seconds, isFinished } =
-    useCountdown(targetDate);
+    useCountdown(promotionEndDate);
 
   //   if (isFinished)
   //     return (

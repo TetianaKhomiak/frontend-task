@@ -2,55 +2,76 @@ import { Link } from "react-router-dom";
 import ArrowTop from "../../../assets/icons/ui/arrow-top.png";
 import LineFooter from "../../../assets/icons/ui/line-footer.png";
 import PaymentMethods from "./PaymentMethods";
+import { useScrollToTop } from "../../../hooks/useScrollToTop";
+import type { FooterSection } from "../../../types";
+
+const FOOTER_SECTIONS: FooterSection[] = [
+  {
+    title: "Storitve",
+    links: [
+      { name: "Domene", to: "#" },
+      { name: "Gostovanje", to: "#" },
+      { name: "E-mail", to: "#" },
+      { name: "Spletne trgovine", to: "#" },
+      { name: "Wordpress", to: "#" },
+      { name: "VPS gostovanje", to: "#" },
+    ],
+  },
+  {
+    title: "Sodelovanje",
+    links: [
+      { name: "Partnerstvo in sodelovanje", to: "#" },
+      { name: "Parterski program za prodajo domen", to: "#" },
+      { name: "Zaposlimo", to: "#" },
+    ],
+  },
+  {
+    title: "Strežniško okolje",
+    links: [
+      { name: "Podatkovni centri", to: "#" },
+      { name: "Kapacitete in strežniki", to: "#" },
+      { name: "Zakaj Zabec?", to: "#" },
+    ],
+  },
+  {
+    title: "Podjetje",
+    links: [
+      { name: "Vizitka", to: "#" },
+      { name: "Lokacija", to: "#" },
+    ],
+  },
+  {
+    title: "Žabji sorodniki",
+    links: [
+      { name: "SPRD.digital", to: "#" },
+      { name: "DAT-IT", to: "#" },
+      { name: "resentia", to: "#" },
+      { name: "WooNinja", to: "#" },
+    ],
+  },
+];
 
 const FooterBottom = () => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+  const scrollToTop = useScrollToTop();
 
   return (
     <div className="bg-[#002A00] py-10">
-      <div className="flex w-full max-w-[1216px] mx-auto gap-20 font-normal text-[14px] font-(family-name:--font-anonymous) text-white">
-        <div className="flex flex-col gap-2">
-          <h3 className="uppercase font-bold">Storitve</h3>
-          <Link to="#">Domene</Link>
-          <Link to="#">Gostovanje</Link>
-          <Link to="#">E-mail</Link>
-          <Link to="#">Spletne trgovine</Link>
-          <Link to="#">Wordpress</Link>
-          <Link to="#">VPS gostovanje</Link>
-        </div>
-        <div className="flex flex-col gap-2">
-          <h3 className="uppercase font-bold">Sodelovanje</h3>
-          <Link to="#">Partnerstvo in sodelovanje</Link>
-          <Link to="#">Parterski program za prodajo domen</Link>
-          <Link to="#">Zaposlimo</Link>
-        </div>
-        <div className="flex flex-col gap-2">
-          <h3 className="uppercase font-bold">Strežniško okolje</h3>
-          <Link to="#">Podatkovni centri</Link>
-          <Link to="#">Kapacitete in strežniki</Link>
-          <Link to="#">Zakaj Zabec?</Link>
-        </div>
-        <div className="flex flex-col gap-2">
-          <h3 className="uppercase font-bold">Podjetje</h3>
-          <Link to="#">Vizitka</Link>
-          <Link to="#">Lokacija</Link>
-        </div>
-        <div className="flex flex-col gap-2">
-          <h3 className="uppercase font-bold">Žabji sorodniki</h3>
-          <Link to="#">SPRD.digital</Link>
-          <Link to="#">DAT-IT</Link>
-          <Link to="#">resentia</Link>
-          <Link to="#">WooNinja</Link>
-        </div>
+      <div className="flex w-full max-w-[1216px] mx-auto gap-20 font-normal text-sm font-(family-name:--font-anonymous) text-white">
+        {FOOTER_SECTIONS.map((section) => (
+          <div key={section.title} className="flex flex-col gap-2">
+            <h3 className="uppercase font-bold">{section.title}</h3>
+            {section.links.map((link) => (
+              <Link key={link.name} to={link.to}>
+                {link.name}
+              </Link>
+            ))}
+          </div>
+        ))}
+
         <div
           className="flex flex-col gap-3 cursor-pointer"
           onClick={scrollToTop}>
-          <img src={ArrowTop} alt="Na vrh" className="w-[40px] h-[40px]" />
+          <img src={ArrowTop} alt="Na vrh" className="w-10 h-10" />
           <p className="underline">Na vrh</p>
         </div>
       </div>
