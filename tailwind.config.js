@@ -1,7 +1,13 @@
+// module.exports = {
+//   darkMode: "class",
+//   theme: {
+//     extend: {},
+//   },
+//   plugins: [],
+// };
 module.exports = {
   darkMode: "class",
-  theme: {
-    extend: {},
-  },
+  content: ["./src/**/*.{js,ts,jsx,tsx}", "./public/index.html"],
+  theme: { extend: {} },
   plugins: [],
 };

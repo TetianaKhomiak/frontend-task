@@ -1,11 +1,11 @@
-import UserIcon from "../../../assets/icons/ui/user.svg";
-import NetworkStatusIcon from "../../../assets/icons/ui/network-status.svg";
-import CartIcon from "../../../assets/icons/ui/cart.svg";
 import { Link } from "react-router-dom";
-import { useTheme } from "../../../hooks/useTheme";
+import CartIcon from "../../../assets/icons/ui/cart.svg";
+import NetworkStatusIcon from "../../../assets/icons/ui/network-status.svg";
+import UserIcon from "../../../assets/icons/ui/user.svg";
+import { useThemeContext } from "../../../context/ThemeProvider";
 
 const TopBar = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useThemeContext();
 
   return (
     <div className="w-full flex justify-between items-center text-[14px] font-(family-name:--font-anonymous) font-bold bg-white dark:bg-gray-900 text-black dark:text-white px-4 py-2">
