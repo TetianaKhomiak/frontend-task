@@ -1,11 +1,20 @@
-import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import underlineIcon from "../../../assets/icons/ui/hover-underline.png";
 import type { NavigationLink } from "../../../types";
 
 const Navbar = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
+  const location = useLocation();
+  const isHomeOrBlog = (to: string) => {
+    if (
+      to === "/" &&
+      (location.pathname === "/" || location.pathname.startsWith("/blog"))
+    ) {
+      return true;
+    }
+    return location.pathname === to;
+  };
   const links: NavigationLink[] = [
     { name: "DOMENE", to: "/domains" },
     { name: "GOSTOVANJE", to: "/hosting" },
@@ -22,9 +31,8 @@ const Navbar = () => {
           key={link.to}
           to={link.to}
           className="relative dark:text-gray-300">
-          {({ isActive }) => {
-            const isVisible = isActive || hoveredIndex === index;
-
+          {() => {
+            const isVisible = isHomeOrBlog(link.to) || hoveredIndex === index;
             return (
               <div
                 className="relative flex flex-col items-center pb-1"

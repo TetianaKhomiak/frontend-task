@@ -8,12 +8,12 @@ export function CountdownTimer({ promotionEndDate }: CountdownTimerProps) {
   const { days, hours, minutes, seconds, isFinished } =
     useCountdown(promotionEndDate);
 
-  //   if (isFinished)
-  //     return (
-  //       <span className="text-white font-(family-name:--font-anonymous)">
-  //         Час вийшов ⏰
-  //       </span>
-  //     );
+  if (isFinished)
+    return (
+      <span className="text-white font-(family-name:--font-anonymous)">
+        Čas je potekel!
+      </span>
+    );
 
   return (
     <time className="font-normal">
