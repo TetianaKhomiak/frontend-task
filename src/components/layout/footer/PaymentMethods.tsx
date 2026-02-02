@@ -35,16 +35,20 @@ const PaymentMethods = () => {
         <p className="hidden md:block">·</p>
         <p className="text-center md:text-left">Član skupine ZGroup</p>
       </div>
-      <div className="flex max-w-[350px] md:max-w-[800px] flex-wrap md:flex-nowrap mx-auto text-sm font-(family-name:--font-anonymous) text-white font-normal gap-4">
+      <div className="flex justify-center max-w-[350px] md:max-w-[800px] flex-wrap md:flex-nowrap mx-auto text-sm font-(family-name:--font-anonymous) text-white font-normal gap-0 md:gap-4">
         <Link to="#">Splošni pogoji</Link>
-        <p>·</p>
+        <p className="ml-3 md:ml-0">·</p>
         <p className="order-first md:order-none w-full text-center md:w-auto md:text-left">
           Cene vključujejo DDV in so v EUR
         </p>
-        <p className="hidden md:block">·</p>
-        <Link to="#">Piškotki</Link>
-        <p>·</p>
-        <Link to="#">Pogoji nakupa</Link>
+        <p className="hidden md:block ml-3 md:ml-0">·</p>
+        <Link to="#" className="ml-3 md:ml-0">
+          Piškotki
+        </Link>
+        <p className="ml-3 md:ml-0">·</p>
+        <Link to="#" className="ml-3 md:ml-0">
+          Pogoji nakupa
+        </Link>
       </div>
     </div>
   );

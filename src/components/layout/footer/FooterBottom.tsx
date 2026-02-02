@@ -78,7 +78,7 @@ const FooterBottom = () => {
       <img
         src={LineFooter}
         alt="Line"
-        className="w-full max-w-[1216px] mx-auto my-7"
+        className="w-full max-w-[80%] md:max-w-[1216px] mx-auto my-7"
       />
       <PaymentMethods />
     </div>
