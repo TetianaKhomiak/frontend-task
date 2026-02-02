@@ -24,7 +24,7 @@ const TasksList = () => {
         Oglejmo si osnovne naloge vzdrževanja in kako jih najlažje izvedete.
       </p>
 
-      <div className="max-w-[700px] flex justify-between text-base font-(family-name:--font-anonymous) font-normal">
+      <div className="max-w-[700px] flex flex-col lg:flex-row justify-between text-base font-(family-name:--font-anonymous) font-normal">
         <ol className="list-decimal pl-6">
           {FIRST_TASKS_LIST.map((task) => (
             <li key={task}>{task}</li>

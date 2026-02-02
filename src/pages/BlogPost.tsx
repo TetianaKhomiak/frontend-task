@@ -5,12 +5,14 @@ import { BlogPostIntro, TasksList, BlogSection } from "../components/blog";
 const BlogPost = () => {
   return (
     <div className="bg-[#ECF3ED] dark:bg-[#2F3A4D]">
-      <h1 className="font-(family-name:--font-montserrat) text-[32px] dark:text-gray-300 font-black max-w-[800px] m-auto py-20">
+      <h1
+        className="font-(family-name:--font-montserrat) text-[32px] text-center
+    lg:text-left  dark:text-gray-300 font-black max-w-[500px] md:max-w-[800px] mx-auto px-5 py-20">
         Vzdrževanje WordPress Spletne Strani
       </h1>
 
       <div className="w-full bg-white dark:bg-gray-800 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] dark:bg-[radial-gradient(#4b5563_1px,transparent_1px)] bg-[length:16px_16px] pb-22">
-        <div className="max-w-[800px] m-auto text-base dark:text-gray-300 font-(family-name:--font-anonymous) font-normal">
+        <div className="max-w-[300px] sm:max-w-[500px] md:max-w-[550px] lg:max-w-[800px] m-auto text-base dark:text-gray-300 font-(family-name:--font-anonymous) font-normal">
           <BlogPostIntro />
           <TasksList />
 
@@ -70,7 +72,7 @@ const BlogPost = () => {
               strokovna podpora, je pripravila zapisa, kako si varnosto kopijo
               in restore lahko uredite na kontrolni plošči Direct Admin:
             </p>
-            <div className="flex gap-10">
+            <div className="flex flex-col lg:flex-row gap-10 items-center lg:items-start">
               <BlogDownloadCard
                 text="Backup spletne strani v DirectAdmin (WordPress)"
                 size="PDF, 15 mb"

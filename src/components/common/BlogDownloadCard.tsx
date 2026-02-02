@@ -1,7 +1,7 @@
 import FileDownload from "../../assets/icons/ui/file-download.png";
 import type { BlogDownloadCardProps } from "../../types/blog";
 
-const BlogUploadCard = ({
+const BlogDownloadCard = ({
   text,
   size,
   width,
@@ -13,9 +13,8 @@ const BlogUploadCard = ({
 }) => {
   return (
     <div
-      className={`h-[144px] flex items-center justify-${justify} gap-7 bg-white dark:bg-[#D8E0EB] border-[1px] border-[#D0DD26] shadow-[16px_24px_32px_0px_rgba(108,182,63,0.2)] p-6 ${
-        width ? width : "w-full max-w-[384px]"
-      }`}>
+      className={`h-[144px] flex items-center justify-${justify} gap-7 bg-white dark:bg-[#D8E0EB] border-[1px] border-[#D0DD26] shadow-[16px_24px_32px_0px_rgba(108,182,63,0.2)] p-6 
+      ${width ? width : "w-full lg:max-w-[384px] "}`}>
       <img
         src={FileDownload}
         alt="Prenesi datoteko"
@@ -33,4 +32,4 @@ const BlogUploadCard = ({
   );
 };
 
-export default BlogUploadCard;
+export default BlogDownloadCard;
