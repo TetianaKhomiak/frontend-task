@@ -55,7 +55,7 @@ const FooterTop = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-col-reverse lg:flex-col md:flex-row w-full gap-10 lg:gap-10 xl:gap-15">
+        <div className="flex flex-col-reverse lg:flex-row md:flex-row w-full gap-10 lg:gap-10 xl:gap-15">
           <div className="flex gap-10 lg:gap-5 xl:gap-5 self-center">
             {SOCIAL_LINKS.map((link) => (
               <a
