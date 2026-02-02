@@ -39,7 +39,7 @@ const BlogCard = ({
           to="/blog"
           className="mt-3 font-(family-name:--font-anonymous) font-bold text-[16px] inline-flex items-center text-left py-1 dark:text-gray-300">
           {buttonText}
-          <img src={ArrowIcon} alt="arrow icon" className="ml-3 invert" />
+          <img src={ArrowIcon} alt="arrow icon" className="ml-3 dark:invert" />
         </NavLink>
       </div>
     </div>

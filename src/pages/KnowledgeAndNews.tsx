@@ -7,26 +7,35 @@ const KnowledgeAndNews = () => {
     <>
       <div
         className="bg-white dark:bg-gray-900
-  bg-[radial-gradient(#d1d5db_1px,transparent_1px)] dark:bg-[radial-gradient(#4b5563_1px,transparent_1px)]
-  bg-[length:16px_16px]">
-        <div className="bg-[#ECF3ED] dark:bg-[#2F3A4D]  flex justify-center items-center h-[208px]">
+        bg-[radial-gradient(#d1d5db_1px,transparent_1px)] dark:bg-[radial-gradient(#4b5563_1px,transparent_1px)]
+        bg-[length:16px_16px]">
+        <div className="bg-[#ECF3ED] dark:bg-[#2F3A4D] flex justify-center items-center h-[208px]">
           <h1 className="font-(family-name:--font-montserrat) text-[32px] dark:text-gray-300">
             Znanje in novosti
           </h1>
         </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-10 max-w-[1216px] mx-auto py-12">
-          {blogs.map((blog) => (
-            <BlogCard
-              key={blog.id}
-              image={blog.image}
-              author={blog.author}
-              date={blog.date}
-              title={blog.title}
-              text={blog.text}
-              buttonText={blog.buttonText}
-            />
-          ))}
+          {blogs.map((blog, index) => {
+            const lastRowStartIndex = blogs.length - (blogs.length % 3 || 3);
+
+            return (
+              <div
+                key={blog.id}
+                className={index >= lastRowStartIndex ? "hidden sm:block" : ""}>
+                <BlogCard
+                  image={blog.image}
+                  author={blog.author}
+                  date={blog.date}
+                  title={blog.title}
+                  text={blog.text}
+                  buttonText={blog.buttonText}
+                />
+              </div>
+            );
+          })}
         </div>
+
         <Pagination />
       </div>
     </>

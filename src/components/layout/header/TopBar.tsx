@@ -32,7 +32,7 @@ const TopBar = () => {
         <img
           src={UserIcon}
           alt="Moj Žabec"
-          className="w-4 h-4 brightness-0 invert"
+          className="w-4 h-4 brightness-0 dark:invert"
         />
         <span>Moj Žabec</span>
       </Link>
@@ -41,7 +41,7 @@ const TopBar = () => {
         <img
           src={CartIcon}
           alt="Košarica"
-          className="w-4 h-4 brightness-0 invert"
+          className="w-4 h-4 brightness-0 dark:invert"
         />
         <span>Košarica</span>
       </Link>

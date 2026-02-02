@@ -66,7 +66,7 @@ const FooterTop = () => {
                 <img
                   src={link.icon}
                   alt={link.alt}
-                  className="w-8 h-8 brightness-0 invert"
+                  className="w-8 h-8 brightness-0 dark:invert"
                 />
               </a>
             ))}
