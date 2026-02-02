@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
+import { BlogPostIntro, BlogSection, TasksList } from "../components/blog";
 import BlogDownloadCard from "../components/common/BlogDownloadCard";
-import { BlogPostIntro, TasksList, BlogSection } from "../components/blog";
 
 const BlogPost = () => {
   return (

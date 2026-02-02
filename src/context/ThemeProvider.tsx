@@ -1,6 +1,6 @@
+import type { ReactNode } from "react";
 import { createContext, useContext } from "react";
 import { useTheme } from "../hooks/useTheme";
-import type { ReactNode } from "react";
 
 type ThemeContextType = ReturnType<typeof useTheme>;
 type ThemeProviderProps = {

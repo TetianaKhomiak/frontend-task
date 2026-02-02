@@ -1,8 +1,8 @@
 import Logo from "../../../assets/images/logo.png";
 import Banner from "./Banner";
+import HamburgerMenu from "./HamburgerMenu";
 import Navbar from "./Navbar";
 import TopBar from "./TopBar";
-import HamburgerMenu from "./HamburgerMenu";
 
 const Header = () => {
   return (

@@ -74,20 +74,20 @@ const FooterTop = () => {
           <div className="lg:w-[200px] xl:w-[270px] flex flex-col items-center gap-4 text-sm font-(family-name:--font-anonymous)">
             <p className="uppercase font-bold">Telefonska podpora</p>
             <div className="flex flex-col items-center">
-              <p className="uppercase font-normal">
+              <address className="uppercase font-normal">
                 01 / <a href="tel:6001050">600 10 50</a>
-              </p>
+              </address>
               <p className="font-normal">Delovniki: 8:00-20:00</p>
             </div>
           </div>
           <div className="lg:w-[200px] xl:w-[270px] flex flex-col items-center gap-4 text-sm font-(family-name:--font-anonymous)">
             <p className="uppercase font-bold">TPodpora po e-pošti</p>
-            <div className="flex flex-col items-center">
+            <address className="flex flex-col items-center">
               <a href="mailto:info@zabec.net" className="font-normal underline">
                 info@zabec.net
               </a>
               <p className="font-normal">Non-stop 24/7</p>
-            </div>
+            </address>
           </div>
           <div className="lg:w-[200px] xl:w-[270px] flex flex-col items-center gap-4">
             <p className="uppercase text-[14px] font-(family-name:--font-anonymous) font-bold">

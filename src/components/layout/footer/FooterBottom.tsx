@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import ArrowTop from "../../../assets/icons/ui/arrow-top.png";
 import LineFooter from "../../../assets/icons/ui/line-footer.png";
-import PaymentMethods from "./PaymentMethods";
 import { useScrollToTop } from "../../../hooks/useScrollToTop";
 import type { FooterSection } from "../../../types";
+import PaymentMethods from "./PaymentMethods";
 
 const FOOTER_SECTIONS: FooterSection[] = [
   {

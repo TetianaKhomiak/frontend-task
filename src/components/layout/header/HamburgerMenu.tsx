@@ -1,16 +1,16 @@
-import * as React from "react";
+import CloseIcon from "@mui/icons-material/Close";
+import MenuIcon from "@mui/icons-material/Menu";
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import Divider from "@mui/material/Divider";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
-import CartIcon from "../../../assets/icons/ui/cart.svg";
-import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import Typography from "@mui/material/Typography";
+import * as React from "react";
+import CartIcon from "../../../assets/icons/ui/cart.svg";
 
 export default function FullScreenHamburgerMenu() {
   const [open, setOpen] = React.useState(false);

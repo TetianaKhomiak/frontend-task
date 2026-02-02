@@ -1,4 +1,5 @@
 import type { Blog } from "../types";
+
 import {
   blog1,
   blog2,
