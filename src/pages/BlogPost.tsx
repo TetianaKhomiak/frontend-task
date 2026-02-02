@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import BlogUploadCard from "../components/common/BlogDownloadCard";
+import BlogDownloadCard from "../components/common/BlogDownloadCard";
 import { BlogPostIntro, TasksList, BlogSection } from "../components/blog";
 
 const BlogPost = () => {
   return (
-    <div className="bg-[#ECF3ED] dark:bg-gray-800">
-      <h1 className="font-(family-name:--font-montserrat) text-[32px] dark:text-white font-black max-w-[800px] m-auto py-20">
+    <div className="bg-[#ECF3ED] dark:bg-[#2F3A4D]">
+      <h1 className="font-(family-name:--font-montserrat) text-[32px] dark:text-gray-300 font-black max-w-[800px] m-auto py-20">
         Vzdrževanje WordPress Spletne Strani
       </h1>
 
       <div className="w-full bg-white dark:bg-gray-800 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] dark:bg-[radial-gradient(#4b5563_1px,transparent_1px)] bg-[length:16px_16px] pb-22">
-        <div className="max-w-[800px] m-auto text-base dark:text-gray-100 font-(family-name:--font-anonymous) font-normal">
+        <div className="max-w-[800px] m-auto text-base dark:text-gray-300 font-(family-name:--font-anonymous) font-normal">
           <BlogPostIntro />
           <TasksList />
 
@@ -71,11 +71,11 @@ const BlogPost = () => {
               in restore lahko uredite na kontrolni plošči Direct Admin:
             </p>
             <div className="flex gap-10">
-              <BlogUploadCard
+              <BlogDownloadCard
                 text="Backup spletne strani v DirectAdmin (WordPress)"
                 size="PDF, 15 mb"
               />
-              <BlogUploadCard
+              <BlogDownloadCard
                 text="Backup spletne strani v DirectAdmin (WordPress)"
                 size="PDF, 15 mb"
               />
@@ -101,7 +101,7 @@ const BlogPost = () => {
               WordPress Updates preverite ali vam je na voljo kakšna posodobitev
               in na kateri različici se nahajate sedaj.
             </p>
-            <BlogUploadCard
+            <BlogDownloadCard
               text="Kako posodobiti WordPress - Navodila"
               size="WORD, 116 mb"
               width="w-full"

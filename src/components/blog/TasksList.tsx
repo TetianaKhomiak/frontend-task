@@ -17,7 +17,7 @@ const SECOND_TASKS_LIST = [
 const TasksList = () => {
   return (
     <div className="flex flex-col gap-3 pb-8">
-      <h2 className="text-[#002A00] font-black font-(family-name:--font-montserrat) text-2xl">
+      <h2 className="text-[#002A00]  dark:text-gray-300 font-black font-(family-name:--font-montserrat) text-2xl">
         10 osnovnih nalog vzdrževanja WordPress spletne strani
       </h2>
       <p className="text-base font-(family-name:--font-anonymous) font-normal">

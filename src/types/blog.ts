@@ -7,3 +7,9 @@ export interface Blog {
   text: string;
   buttonText: string;
 }
+
+export type BlogDownloadCardProps = {
+  text: string;
+  size: string;
+  width?: string;
+};
