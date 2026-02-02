@@ -22,7 +22,7 @@ const PAYMENT_METHODS: PaymentMethod[] = [
 const PaymentMethods = () => {
   return (
     <div className="flex flex-col gap-4">
-      <h3 className="uppercase font-bold text-sm font-(family-name:--font-anonymous) text-white text-center ml-5">
+      <h3 className="uppercase font-bold text-sm font-(family-name:--font-anonymous) text-white dark:text-gray-300 text-center ml-5">
         Možnosti plačila
       </h3>
       <div className="flex gap-5 mx-auto mb-5">

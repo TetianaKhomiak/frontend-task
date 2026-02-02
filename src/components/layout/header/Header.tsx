@@ -7,7 +7,7 @@ import HamburgerMenu from "./HamburgerMenu";
 const Header = () => {
   return (
     <>
-      <header className="hidden lg:block">
+      <header className="hidden lg:block dark:bg-[#6B7A90]">
         <Banner />
         <div className=" mx-auto py-5 flex lg:gap-10 xl:gap-25 lg:max-w-[950px] xl:max-w-[1216px] items-center">
           <img

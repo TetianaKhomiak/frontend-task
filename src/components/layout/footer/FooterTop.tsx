@@ -34,13 +34,13 @@ const SOCIAL_LINKS: SocialLink[] = [
 
 const FooterTop = () => {
   return (
-    <div className="bg-[#ECF3ED] py-20">
+    <div className="bg-[#ECF3ED] py-20 dark:bg-[#6B7A90] dark:text-gray-300">
       <div className="flex flex-col w-full max-w-[1216px] mx-auto gap-20">
         <div className="flex w-full gap-35">
           <img
             src={Logo}
             alt="Žabec Company Logo"
-            className="w-[88px] h-[88px]"
+            className="w-[88px] h-[88px] "
           />
           {FOOTER_FEATURES.map((feature) => (
             <div key={feature.alt} className="flex flex-col items-center gap-4">
@@ -63,7 +63,11 @@ const FooterTop = () => {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer">
-                <img src={link.icon} alt={link.alt} className="w-8 h-8" />
+                <img
+                  src={link.icon}
+                  alt={link.alt}
+                  className="w-8 h-8 brightness-0 invert"
+                />
               </a>
             ))}
           </div>

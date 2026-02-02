@@ -8,22 +8,18 @@ const TopBar = () => {
   const { theme, toggleTheme } = useThemeContext();
 
   return (
-    <div className="w-full flex justify-between items-center text-[14px] font-(family-name:--font-anonymous) font-bold bg-white dark:bg-gray-900 text-black dark:text-white py-2">
+    <div className="w-full flex justify-between items-center text-[14px] font-(family-name:--font-anonymous) font-bold bg-white dark:bg-[#6B7A90] text-black dark:text-gray-300 py-2">
       <div className="flex flex-col">
         <p className="text-[12px]">Non-stop 24/7</p>
         <address className="not-italic">
-          <a href="mailto:podpora@zabec.net" className="dark:text-gray-300">
-            podpora@zabec.net
-          </a>
+          <a href="mailto:podpora@zabec.net">podpora@zabec.net</a>
         </address>
       </div>
 
       <div className="flex flex-col">
         <p className="text-[12px]">Delovniki 8:00-20:00</p>
         <address className="not-italic">
-          <a href="tel:040333666" className="dark:text-gray-300">
-            040 333 666
-          </a>
+          <a href="tel:040333666">040 333 666</a>
         </address>
       </div>
 
@@ -33,12 +29,20 @@ const TopBar = () => {
       </div>
 
       <Link to="#" className="w-[101px] flex justify-between items-center">
-        <img src={UserIcon} alt="Moj Žabec" className="w-4 h-4" />
+        <img
+          src={UserIcon}
+          alt="Moj Žabec"
+          className="w-4 h-4 brightness-0 invert"
+        />
         <span>Moj Žabec</span>
       </Link>
 
       <Link to="#" className="w-[94px] flex justify-between items-center">
-        <img src={CartIcon} alt="Košarica" className="w-4 h-4" />
+        <img
+          src={CartIcon}
+          alt="Košarica"
+          className="w-4 h-4 brightness-0 invert"
+        />
         <span>Košarica</span>
       </Link>
 

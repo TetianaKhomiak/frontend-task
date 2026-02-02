@@ -18,7 +18,10 @@ const Navbar = () => {
   return (
     <div className="w-full max-w-[906px] flex justify-between font-(family-name:--font-montserrat) font-extrabold text-sm">
       {links.map((link, index) => (
-        <NavLink key={link.to} to={link.to} className="relative">
+        <NavLink
+          key={link.to}
+          to={link.to}
+          className="relative dark:text-gray-300">
           {({ isActive }) => {
             const isVisible = isActive || hoveredIndex === index;
 

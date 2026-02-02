@@ -55,8 +55,8 @@ const FooterBottom = () => {
   const scrollToTop = useScrollToTop();
 
   return (
-    <div className="bg-[#002A00] py-10">
-      <div className="flex w-full max-w-[1216px] mx-auto gap-20 font-normal text-sm font-(family-name:--font-anonymous) text-white">
+    <div className="bg-[#002A00] py-10 dark:bg-gray-900">
+      <div className="flex w-full max-w-[1216px] mx-auto gap-20 font-normal text-sm font-(family-name:--font-anonymous) text-white dark:text-gray-300">
         {FOOTER_SECTIONS.map((section) => (
           <div key={section.title} className="flex flex-col gap-2">
             <h3 className="uppercase font-bold">{section.title}</h3>
