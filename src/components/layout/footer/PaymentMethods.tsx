@@ -25,21 +25,23 @@ const PaymentMethods = () => {
       <h3 className="uppercase font-bold text-sm font-(family-name:--font-anonymous) text-white dark:text-gray-300 text-center ml-5">
         Možnosti plačila
       </h3>
-      <div className="flex gap-5 mx-auto mb-5">
+      <div className="flex flex-wrap max-w-[228px] md:max-w-[480px] w-full md:flex-nowrap gap-5 mx-auto mb-5">
         {PAYMENT_METHODS.map(({ icon, alt }) => (
           <img key={alt} src={icon} alt={alt} />
         ))}
       </div>
-      <div className="flex mx-auto text-sm font-(family-name:--font-anonymous) text-white font-normal gap-4">
+      <div className="flex flex-col md:flex-row mx-auto text-sm font-(family-name:--font-anonymous) text-white font-normal gap-0 md:gap-4">
         <p>Copyright © Zabec.net d.o.o.</p>
-        <p>·</p>
-        <p>Član skupine ZGroup</p>
+        <p className="hidden md:block">·</p>
+        <p className="text-center md:text-left">Član skupine ZGroup</p>
       </div>
-      <div className="flex mx-auto text-sm font-(family-name:--font-anonymous) text-white font-normal gap-4">
+      <div className="flex max-w-[350px] md:max-w-[800px] flex-wrap md:flex-nowrap mx-auto text-sm font-(family-name:--font-anonymous) text-white font-normal gap-4">
         <Link to="#">Splošni pogoji</Link>
         <p>·</p>
-        <p>Cene vključujejo DDV in so v EUR</p>
-        <p>·</p>
+        <p className="order-first md:order-none w-full text-center md:w-auto md:text-left">
+          Cene vključujejo DDV in so v EUR
+        </p>
+        <p className="hidden md:block">·</p>
         <Link to="#">Piškotki</Link>
         <p>·</p>
         <Link to="#">Pogoji nakupa</Link>

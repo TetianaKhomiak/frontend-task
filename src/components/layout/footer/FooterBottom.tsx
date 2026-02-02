@@ -56,7 +56,7 @@ const FooterBottom = () => {
 
   return (
     <div className="bg-[#002A00] py-10 dark:bg-gray-900">
-      <div className="flex w-full max-w-[1216px] mx-auto gap-20 font-normal text-sm font-(family-name:--font-anonymous) text-white dark:text-gray-300">
+      <div className="flex flex-col md:flex-row w-full max-w-[1216px] mx-auto gap-20 font-normal text-sm font-(family-name:--font-anonymous) text-white dark:text-gray-300 px-10 md:pl-0">
         {FOOTER_SECTIONS.map((section) => (
           <div key={section.title} className="flex flex-col gap-2">
             <h3 className="uppercase font-bold">{section.title}</h3>
@@ -69,7 +69,7 @@ const FooterBottom = () => {
         ))}
 
         <div
-          className="flex flex-col gap-3 cursor-pointer"
+          className="flex flex-col gap-3 cursor-pointer self-end md:self-auto"
           onClick={scrollToTop}>
           <img src={ArrowTop} alt="Na vrh" className="w-10 h-10" />
           <p className="underline">Na vrh</p>
