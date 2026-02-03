@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { CountdownTimer } from "./CountdownTimer";
 
-const PROMOTION_END_DATE = new Date("2026-02-20T00:00:00");
+const PROMOTION_END_DATE = new Date("2026-02-27T00:00:00");
 
 const Banner = () => {
   return (
