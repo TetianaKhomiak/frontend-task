@@ -82,7 +82,6 @@ const FooterTop = () => {
                         order-2 md:order-none">
             <p className="uppercase font-bold">Telefonska podpora</p>
             <div>
-              {" "}
               <address className="uppercase font-normal not-italic text-center">
                 01 / <a href="tel:6001050">600 10 50</a>
               </address>
