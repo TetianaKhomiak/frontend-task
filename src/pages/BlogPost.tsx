@@ -11,7 +11,7 @@ const BlogPost = () => {
         Vzdrževanje WordPress Spletne Strani
       </h1>
 
-      <div className="w-full bg-white dark:bg-gray-800 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] dark:bg-[radial-gradient(#4b5563_1px,transparent_1px)] bg-[length:16px_16px] pb-22">
+      <div className="w-full bg-white dark:bg-gray-800 md:bg-[radial-gradient(#d1d5db_1px,transparent_1px)] dark:bg-[radial-gradient(#4b5563_1px,transparent_1px)] md:bg-[length:16px_16px] pb-22">
         <div className="max-w-[300px] sm:max-w-[500px] md:max-w-[550px] lg:max-w-[800px] m-auto text-base dark:text-gray-300 font-(family-name:--font-anonymous) font-normal">
           <BlogPostIntro />
           <TasksList />

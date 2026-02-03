@@ -6,7 +6,7 @@ const KnowledgeAndNews = () => {
   return (
     <>
       <div
-        className="bg-white md:bg-white md:dark:bg-gray-900
+        className="bg-white md:bg-white dark:bg-gray-900
         md:bg-[radial-gradient(#d1d5db_1px,transparent_1px)] md:dark:bg-[radial-gradient(#4b5563_1px,transparent_1px)]
         md:bg-[length:16px_16px]">
         <div className="bg-[#ECF3ED] dark:bg-[#2F3A4D] flex justify-center items-center h-[208px]">
