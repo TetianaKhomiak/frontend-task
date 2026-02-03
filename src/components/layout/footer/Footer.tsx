@@ -3,10 +3,10 @@ import FooterTop from "./FooterTop";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col">
+    <footer className="flex flex-col">
       <FooterTop />
       <FooterBottom />
-    </div>
+    </footer>
   );
 };
 
