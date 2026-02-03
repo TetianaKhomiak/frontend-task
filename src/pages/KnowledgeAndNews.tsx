@@ -15,7 +15,7 @@ const KnowledgeAndNews = () => {
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-10 max-w-[1216px] mx-auto md:px-5 lg:px-0 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 xl:gap-15 gap-y-10 max-w-[1216px] mx-auto md:px-5 py-12">
           {blogs.map((blog, index) => {
             const lastRowStartIndex = blogs.length - (blogs.length % 3 || 3);
 

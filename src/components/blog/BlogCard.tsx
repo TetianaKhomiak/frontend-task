@@ -24,7 +24,7 @@ const BlogCard = ({
         <img
           src={image}
           alt={title}
-          className="mx-auto max-w-[359px] lg:max-w-[340px] xl:max-w-[384px] "
+          className="mx-auto max-w-[359px] lg:max-w-[310px] xl:max-w-[384px] "
         />
       </NavLink>
 

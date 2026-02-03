@@ -19,29 +19,29 @@ import Logo from "../../../assets/images/logo.png";
 import type { NavigationLink } from "../../../types";
 
 export default function FullScreenHamburgerMenu() {
-  // const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(false);
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
-  // useEffect(() => {
-  //   if (open) {
-  //     document.body.style.overflow = "hidden";
-  //   } else {
-  //     document.body.style.overflow = "unset";
-  //   }
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
 
-  //   return () => {
-  //     document.body.style.overflow = "unset";
-  //   };
-  // }, [open]);
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [open]);
 
   const handleOpen = () => {
-    // setOpen(true);
+    setOpen(true);
     setTimeout(() => setIsAnimating(true), 10);
   };
 
   const handleClose = () => {
     setIsAnimating(false);
-    // setTimeout(() => setOpen(false), 300);
+    setTimeout(() => setOpen(false), 300);
   };
 
   const links: NavigationLink[] = [
@@ -88,222 +88,223 @@ export default function FullScreenHamburgerMenu() {
           </IconButton>
         </Box>
       </Box>
-      {/* 
-      {open && ( */}
-      <Box
-        component="aside"
-        role="dialog"
-        aria-modal="true"
-        aria-label="Mobile navigation menu"
-        className=" bg-white dark:bg-[#6B7A90] text-[#002b01] dark:text-gray-300"
-        sx={{
-          position: "fixed",
-          inset: 0,
-          zIndex: 1300,
-          display: "flex",
-          flexDirection: "column",
-          overflowY: "auto",
-          opacity: isAnimating ? 1 : 0,
-          transform: isAnimating ? "translateX(0)" : "translateX(100%)",
-          transition: "opacity 0.3s ease-in-out, transform 0.3s ease-in-out",
-        }}>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            px: 3,
-            py: 2,
-            mt: 2,
-          }}>
-          <NavLink
-            to="/"
-            style={{ textDecoration: "none", color: "inherit" }}
-            onClick={handleClose}>
-            <Typography
-              className="text-[#002b01] dark:text-gray-300"
-              sx={{
-                fontWeight: 700,
-                fontSize: "14px",
-                fontFamily: "Anonymous Pro, sans-serif",
-              }}>
-              EN
-            </Typography>
-          </NavLink>
 
-          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+      {open && (
+        <Box
+          component="aside"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobile navigation menu"
+          className=" bg-white dark:bg-[#6B7A90] text-[#002b01] dark:text-gray-300"
+          sx={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 1300,
+            display: "flex",
+            flexDirection: "column",
+            overflowY: "auto",
+            opacity: isAnimating ? 1 : 0,
+            transform: isAnimating ? "translateX(0)" : "translateX(100%)",
+            transition: "opacity 0.3s ease-in-out, transform 0.3s ease-in-out",
+          }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              px: 3,
+              py: 2,
+              mt: 2,
+            }}>
             <NavLink
               to="/"
-              style={{ display: "flex", alignItems: "center" }}
+              style={{ textDecoration: "none", color: "inherit" }}
               onClick={handleClose}>
-              <IconButton>
-                <PersonOutlineIcon className="text-[#002b01] dark:text-gray-300" />
-              </IconButton>
+              <Typography
+                className="text-[#002b01] dark:text-gray-300"
+                sx={{
+                  fontWeight: 700,
+                  fontSize: "14px",
+                  fontFamily: "Anonymous Pro, sans-serif",
+                }}>
+                EN
+              </Typography>
             </NavLink>
-            <NavLink
-              to="/"
-              style={{ display: "flex", alignItems: "center" }}
-              onClick={handleClose}>
-              <IconButton>
+
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <NavLink
+                to="/"
+                style={{ display: "flex", alignItems: "center" }}
+                onClick={handleClose}>
+                <IconButton>
+                  <PersonOutlineIcon className="text-[#002b01] dark:text-gray-300" />
+                </IconButton>
+              </NavLink>
+              <NavLink
+                to="/"
+                style={{ display: "flex", alignItems: "center" }}
+                onClick={handleClose}>
+                <IconButton>
+                  <img
+                    src={CartIcon}
+                    alt="Košarica"
+                    className="brightness-0 dark:invert"
+                  />
+                </IconButton>
+              </NavLink>
+              <IconButton onClick={handleClose}>
+                <CloseIcon className="text-[#002b01] dark:text-gray-300" />
+              </IconButton>
+            </Box>
+          </Box>
+
+          <Box component="nav" aria-label="Main navigation">
+            <List>
+              {links.map((link, index) => (
+                <React.Fragment key={link.to}>
+                  <ListItem disablePadding>
+                    <ListItemButton
+                      component={NavLink}
+                      to={link.to}
+                      onClick={handleClose}
+                      sx={{ pl: 4 }}>
+                      <ListItemText
+                        primary={
+                          <Typography
+                            sx={{
+                              textTransform: "uppercase",
+                              fontFamily: "Montserrat, sans-serif",
+                              fontWeight: 800,
+                              fontSize: "20px",
+                            }}>
+                            {link.name}
+                          </Typography>
+                        }
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                  {index < 5 && <Divider sx={{ mx: "auto", width: "90%" }} />}
+                </React.Fragment>
+              ))}
+            </List>
+          </Box>
+
+          <Divider
+            sx={{ borderBottomWidth: 3, my: 2, mx: "auto", width: "90%" }}
+          />
+
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              px: 3,
+              py: 2,
+              mb: 10,
+            }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "start",
+                gap: 3,
+                width: "140px",
+              }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                }}>
                 <img
-                  src={CartIcon}
-                  alt="Košarica"
-                  className="brightness-0 dark:invert"
+                  src={NetworkStatusIcon}
+                  alt="Stanje omrežja"
+                  style={{ width: 16, height: 16 }}
                 />
-              </IconButton>
-            </NavLink>
-            <IconButton onClick={handleClose}>
-              <CloseIcon className="text-[#002b01] dark:text-gray-300" />
-            </IconButton>
-          </Box>
-        </Box>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    fontWeight: 700,
+                    fontFamily: "Anonymous Pro, sans-serif",
+                  }}>
+                  Stanje omrežja
+                </Typography>
+              </Box>
+              <Box>
+                <Typography
+                  sx={{
+                    fontSize: "12px",
+                    fontWeight: 700,
+                    mb: 0.5,
+                    fontFamily: "Anonymous Pro, sans-serif",
+                  }}>
+                  Non-stop 24/7
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    fontWeight: 700,
+                    fontFamily: "Anonymous Pro, sans-serif",
+                  }}>
+                  podpora@zabec.net
+                </Typography>
+              </Box>
+            </Box>
 
-        <Box component="nav" aria-label="Main navigation">
-          <List>
-            {links.map((link, index) => (
-              <React.Fragment key={link.to}>
-                <ListItem disablePadding>
-                  <ListItemButton
-                    component={NavLink}
-                    to={link.to}
-                    onClick={handleClose}
-                    sx={{ pl: 4 }}>
-                    <ListItemText
-                      primary={
-                        <Typography
-                          sx={{
-                            textTransform: "uppercase",
-                            fontFamily: "Montserrat, sans-serif",
-                            fontWeight: 800,
-                            fontSize: "20px",
-                          }}>
-                          {link.name}
-                        </Typography>
-                      }
-                    />
-                  </ListItemButton>
-                </ListItem>
-                {index < 5 && <Divider sx={{ mx: "auto", width: "90%" }} />}
-              </React.Fragment>
-            ))}
-          </List>
-        </Box>
-
-        <Divider
-          sx={{ borderBottomWidth: 3, my: 2, mx: "auto", width: "90%" }}
-        />
-
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            px: 3,
-            py: 2,
-            mb: 10,
-          }}>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "start",
-              gap: 3,
-              width: "50%",
-            }}>
             <Box
               sx={{
                 display: "flex",
-                alignItems: "center",
-                gap: 1,
+                flexDirection: "column",
+                alignItems: "start",
+                gap: 3,
+                width: "140px",
+                fontSize: "12px",
               }}>
-              <img
-                src={NetworkStatusIcon}
-                alt="Stanje omrežja"
-                style={{ width: 16, height: 16 }}
-              />
-              <Typography
+              <Box
                 sx={{
-                  fontSize: "14px",
-                  fontWeight: 700,
-                  fontFamily: "Anonymous Pro, sans-serif",
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  gap: 1,
                 }}>
-                Stanje omrežja
-              </Typography>
-            </Box>
-            <Box>
-              <Typography
-                sx={{
-                  fontSize: "12px",
-                  fontWeight: 700,
-                  mb: 0.5,
-                  fontFamily: "Anonymous Pro, sans-serif",
-                }}>
-                Non-stop 24/7
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: "14px",
-                  fontWeight: 700,
-                  fontFamily: "Anonymous Pro, sans-serif",
-                }}>
-                podpora@zabec.net
-              </Typography>
-            </Box>
-          </Box>
-
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "start",
-              gap: 3,
-              width: "50%",
-              fontSize: "12px",
-            }}>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                gap: 1,
-              }}>
-              <img
-                src={UserIcon}
-                alt="Moj Žabec"
-                className="brightness-0 dark:invert"
-                style={{ width: 16, height: 16 }}
-              />
-              <Typography
-                sx={{
-                  fontSize: "14px",
-                  fontWeight: 700,
-                  fontFamily: "Anonymous Pro, sans-serif",
-                }}>
-                Moj Žabec
-              </Typography>
-            </Box>
-            <Box>
-              <Typography
-                sx={{
-                  fontSize: "12px",
-                  fontWeight: 700,
-                  mb: 0.5,
-                  fontFamily: "Anonymous Pro, sans-serif",
-                }}>
-                Delovniki 8:00-20:00
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: "14px",
-                  fontWeight: 700,
-                  fontFamily: "Anonymous Pro, sans-serif",
-                }}>
-                040 333 666
-              </Typography>
+                <img
+                  src={UserIcon}
+                  alt="Moj Žabec"
+                  className="brightness-0 dark:invert"
+                  style={{ width: 16, height: 16 }}
+                />
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    fontWeight: 700,
+                    fontFamily: "Anonymous Pro, sans-serif",
+                  }}>
+                  Moj Žabec
+                </Typography>
+              </Box>
+              <Box>
+                <Typography
+                  sx={{
+                    fontSize: "12px",
+                    fontWeight: 700,
+                    mb: 0.5,
+                    fontFamily: "Anonymous Pro, sans-serif",
+                  }}>
+                  Delovniki 8:00-20:00
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    fontWeight: 700,
+                    fontFamily: "Anonymous Pro, sans-serif",
+                  }}>
+                  040 333 666
+                </Typography>
+              </Box>
             </Box>
           </Box>
         </Box>
-      </Box>
-      {/* // )} */}
+      )}
     </>
   );
 }
