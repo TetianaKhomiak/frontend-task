@@ -56,7 +56,7 @@ export default function FullScreenHamburgerMenu() {
   return (
     <>
       <Box
-        className="flex justify-between px-5 py-0.5 items-center lg:hidden"
+        className="flex justify-between dark:bg-[#6B7A90] dark:text-gray-300 px-5 py-0.5 items-center lg:hidden"
         component="header">
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <img src={Logo} alt="Logo" style={{ width: 50, height: 50 }} />
@@ -84,7 +84,7 @@ export default function FullScreenHamburgerMenu() {
             />
           </IconButton>
           <IconButton onClick={handleOpen}>
-            <MenuIcon />
+            <MenuIcon className="dark:text-gray-300" />
           </IconButton>
         </Box>
       </Box>
