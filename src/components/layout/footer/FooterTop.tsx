@@ -25,25 +25,31 @@ const FOOTER_FEATURES: FooterFeature[] = [
 const SOCIAL_LINKS: SocialLink[] = [
   { icon: FacebookIcon, alt: "Facebook", href: "#" },
   { icon: TwitterIcon, alt: "Twitter", href: "#" },
-  {
-    icon: LinkedinIcon,
-    alt: "LinkedIn",
-    href: "#",
-  },
+  { icon: LinkedinIcon, alt: "LinkedIn", href: "#" },
 ];
 
 const FooterTop = () => {
   return (
     <div className="bg-[#ECF3ED] py-20 dark:bg-[#6B7A90] dark:text-gray-300">
-      <div className="flex flex-col w-full max-w-[1216px] mx-auto gap-10 md:gap-20 px-15 xl:px-0">
-        <div className="flex w-full flex-col md:flex-row gap-10 lg:gap-18 xl:gap-35">
-          <img
-            src={Logo}
-            alt="Žabec Company Logo"
-            className="w-[88px] h-[88px] mx-auto md:mx-0"
-          />
+      <div className="max-w-[1216px] mx-auto">
+        <div
+          className="
+          max-w-[1050px] px-15 md:px-5 xl:px-0
+          grid grid-cols-1 md:grid-cols-4
+          gap-y-14 gap-x-10
+        ">
+          <div className="flex justify-center md:justify-start">
+            <img
+              src={Logo}
+              alt="Žabec Company Logo"
+              className="w-[88px] h-[88px]"
+            />
+          </div>
+
           {FOOTER_FEATURES.map((feature) => (
-            <div key={feature.alt} className="flex flex-col items-center gap-4">
+            <div
+              key={feature.alt}
+              className="flex flex-col items-center gap-4 text-center">
               <img
                 src={feature.icon}
                 alt={feature.alt}
@@ -54,9 +60,8 @@ const FooterTop = () => {
               </p>
             </div>
           ))}
-        </div>
-        <div className="flex flex-col-reverse lg:flex-row md:flex-row w-full gap-10 lg:gap-10 xl:gap-15">
-          <div className="flex gap-10 lg:gap-5 xl:gap-5 self-center">
+
+          <div className="flex justify-center gap-10 md:justify-start order-4 md:order-none">
             {SOCIAL_LINKS.map((link) => (
               <a
                 key={link.alt}
@@ -71,25 +76,39 @@ const FooterTop = () => {
               </a>
             ))}
           </div>
-          <div className="lg:w-[200px] xl:w-[270px] flex flex-col items-center gap-4 text-sm font-(family-name:--font-anonymous)">
+
+          <div
+            className="flex flex-col items-center gap-4 text-sm font-(family-name:--font-anonymous)
+                        order-2 md:order-none">
             <p className="uppercase font-bold">Telefonska podpora</p>
-            <div className="flex flex-col items-center">
-              <address className="uppercase font-normal">
+            <div>
+              {" "}
+              <address className="uppercase font-normal not-italic text-center">
                 01 / <a href="tel:6001050">600 10 50</a>
               </address>
-              <p className="font-normal">Delovniki: 8:00-20:00</p>
+              <p className="font-normal">Delovniki: 8:00–20:00</p>
             </div>
           </div>
-          <div className="lg:w-[200px] xl:w-[270px] flex flex-col items-center gap-4 text-sm font-(family-name:--font-anonymous)">
-            <p className="uppercase font-bold">TPodpora po e-pošti</p>
-            <address className="flex flex-col items-center">
-              <a href="mailto:info@zabec.net" className="font-normal underline">
-                info@zabec.net
-              </a>
+
+          <div
+            className="flex flex-col items-center gap-4 text-sm font-(family-name:--font-anonymous)
+                        order-3 md:order-none">
+            <p className="uppercase font-bold">Podpora po e-pošti</p>
+            <div>
+              <address className="not-italic">
+                <a
+                  href="mailto:info@zabec.net"
+                  className="font-normal underline">
+                  info@zabec.net
+                </a>
+              </address>
               <p className="font-normal">Non-stop 24/7</p>
-            </address>
+            </div>
           </div>
-          <div className="lg:w-[200px] xl:w-[270px] flex flex-col items-center gap-4">
+
+          <div
+            className="flex flex-col items-center gap-4
+                        order-1 md:order-none">
             <p className="uppercase text-[14px] font-(family-name:--font-anonymous) font-bold">
               Stanje omrežja
             </p>

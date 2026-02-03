@@ -7,7 +7,7 @@ const BlogPost = () => {
     <div className="bg-[#ECF3ED] dark:bg-[#2F3A4D]">
       <h1
         className="font-(family-name:--font-montserrat) text-[32px] text-center
-    lg:text-left  dark:text-gray-300 font-black max-w-[500px] md:max-w-[800px] mx-auto px-5 py-20">
+    lg:text-left  dark:text-gray-300 font-black max-w-[500px] md:max-w-[800px] mx-auto  py-20">
         Vzdrževanje WordPress Spletne Strani
       </h1>
 
@@ -20,7 +20,7 @@ const BlogPost = () => {
             <p>
               Gesla so vaša prva obrambna linija, boljše ko bo geslo, težje ga
               bo ugotoviti. Predlagamo, da geslo vsebuje
-              <strong>vsaj 7 znakov</strong>, med njimi naj bodo{" "}
+              <strong> vsaj 7 znakov</strong>, med njimi naj bodo{" "}
               <strong>velika, mala začetnica, številka, poseben znak.</strong>{" "}
               Kljub temu, pa se tudi takšno geslo lahko ugotovi (sicer manj
               pogosto), prav zato je pomembno, da tudi gesla redno spreminjamo.

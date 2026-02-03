@@ -9,7 +9,7 @@ const Header = () => {
     <>
       <header className="hidden lg:block dark:bg-[#6B7A90]">
         <Banner />
-        <div className=" mx-auto py-5 flex lg:gap-10 xl:gap-25 lg:max-w-[950px] xl:max-w-[1216px] items-center">
+        <div className=" mx-auto py-5 flex md:gap-20 lg:gap-20 xl:gap-30 md:max-w-[950px] lg:max-w-[1000px] xl:max-w-[1216px] items-center">
           <img
             src={Logo}
             alt="Žabec Company Logo"
