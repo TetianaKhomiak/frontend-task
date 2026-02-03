@@ -56,18 +56,18 @@ export default function FullScreenHamburgerMenu() {
   return (
     <>
       <Box
-        component="header"
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          marginX: 1.5,
-          alignItems: "center",
-          py: 0.2,
-        }}>
-        <Box className="flex items-center">
+        className="flex justify-between px-5 py-0.5 items-center lg:hidden"
+        component="header">
+        <Box sx={{ display: "flex", alignItems: "center" }}>
           <img src={Logo} alt="Logo" style={{ width: 50, height: 50 }} />
         </Box>
-        <Box className="flex items-center my-8 gap-2">
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            my: 3.5,
+            gap: 1,
+          }}>
           <Typography
             sx={{
               fontSize: "14px",
@@ -112,7 +112,7 @@ export default function FullScreenHamburgerMenu() {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              px: 2,
+              px: 3,
               py: 2,
               mt: 2,
             }}>
