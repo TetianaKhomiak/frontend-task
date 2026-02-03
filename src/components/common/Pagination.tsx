@@ -4,7 +4,7 @@ const Pagination = () => {
   return (
     <nav
       aria-label="Pagination"
-      className="flex max-w-[200px] sm:max-w-[420px]  flex-col sm:flex-row gap-4 justify-center m-auto mt-8 pb-16">
+      className="flex max-w-[200px] sm:max-w-[420px] flex-col sm:flex-row gap-4 justify-center m-auto lg:mt-8 pb-16">
       <Link
         to="#"
         className="w-[196px] h-14 px-8 py-4 border border-gray-300 bg-white rounded-4xl font-(family-name:--font-anonymous) font-bold text-base uppercase text-center whitespace-nowrap dark:bg-[#1A2233] dark:text-[#E5E7EB] dark:border-[#2B3448]">
