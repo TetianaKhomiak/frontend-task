@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
@@ -12,9 +10,12 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import CartIcon from "../../../assets/icons/ui/cart.svg";
 import NetworkStatusIcon from "../../../assets/icons/ui/network-status.svg";
 import UserIcon from "../../../assets/icons/ui/user.svg";
+import Logo from "../../../assets/images/logo.png";
 import type { NavigationLink } from "../../../types";
 
 export default function FullScreenHamburgerMenu() {
@@ -54,11 +55,39 @@ export default function FullScreenHamburgerMenu() {
 
   return (
     <>
-      <div className="flex justify-end lg:hidden">
-        <IconButton onClick={handleOpen}>
-          <MenuIcon />
-        </IconButton>
-      </div>
+      <Box
+        component="header"
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          marginX: 1.5,
+          alignItems: "center",
+          py: 0.2,
+        }}>
+        <Box className="flex items-center">
+          <img src={Logo} alt="Logo" style={{ width: 50, height: 50 }} />
+        </Box>
+        <Box className="flex items-center my-8 gap-2">
+          <Typography
+            sx={{
+              fontSize: "14px",
+              fontWeight: 700,
+              fontFamily: "Anonymous Pro, sans-serif",
+            }}>
+            Košarica
+          </Typography>
+          <IconButton>
+            <img
+              src={CartIcon}
+              alt="Košarica"
+              className="brightness-0 dark:invert"
+            />
+          </IconButton>
+          <IconButton onClick={handleOpen}>
+            <MenuIcon />
+          </IconButton>
+        </Box>
+      </Box>
 
       {open && (
         <Box
@@ -73,6 +102,7 @@ export default function FullScreenHamburgerMenu() {
             zIndex: 1300,
             display: "flex",
             flexDirection: "column",
+            overflowY: "auto",
             opacity: isAnimating ? 1 : 0,
             transform: isAnimating ? "translateX(0)" : "translateX(100%)",
             transition: "opacity 0.3s ease-in-out, transform 0.3s ease-in-out",
@@ -84,6 +114,7 @@ export default function FullScreenHamburgerMenu() {
               justifyContent: "space-between",
               px: 2,
               py: 2,
+              mt: 2,
             }}>
             <NavLink
               to="/"
@@ -94,6 +125,7 @@ export default function FullScreenHamburgerMenu() {
                 sx={{
                   fontWeight: 700,
                   fontSize: "14px",
+                  fontFamily: "Anonymous Pro, sans-serif",
                 }}>
                 EN
               </Typography>
@@ -167,6 +199,7 @@ export default function FullScreenHamburgerMenu() {
               flexDirection: "row",
               px: 3,
               py: 2,
+              mb: 10,
             }}>
             <Box
               sx={{
@@ -187,15 +220,31 @@ export default function FullScreenHamburgerMenu() {
                   alt="Stanje omrežja"
                   style={{ width: 16, height: 16 }}
                 />
-                <Typography sx={{ fontSize: "14px", fontWeight: 700 }}>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    fontWeight: 700,
+                    fontFamily: "Anonymous Pro, sans-serif",
+                  }}>
                   Stanje omrežja
                 </Typography>
               </Box>
               <Box>
-                <Typography sx={{ fontSize: "12px", fontWeight: 700, mb: 0.5 }}>
+                <Typography
+                  sx={{
+                    fontSize: "12px",
+                    fontWeight: 700,
+                    mb: 0.5,
+                    fontFamily: "Anonymous Pro, sans-serif",
+                  }}>
                   Non-stop 24/7
                 </Typography>
-                <Typography sx={{ fontSize: "14px", fontWeight: 700 }}>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    fontWeight: 700,
+                    fontFamily: "Anonymous Pro, sans-serif",
+                  }}>
                   podpora@zabec.net
                 </Typography>
               </Box>
@@ -223,15 +272,31 @@ export default function FullScreenHamburgerMenu() {
                   className="brightness-0 dark:invert"
                   style={{ width: 16, height: 16 }}
                 />
-                <Typography sx={{ fontSize: "14px", fontWeight: 700 }}>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    fontWeight: 700,
+                    fontFamily: "Anonymous Pro, sans-serif",
+                  }}>
                   Moj Žabec
                 </Typography>
               </Box>
               <Box>
-                <Typography sx={{ fontSize: "12px", fontWeight: 700, mb: 0.5 }}>
+                <Typography
+                  sx={{
+                    fontSize: "12px",
+                    fontWeight: 700,
+                    mb: 0.5,
+                    fontFamily: "Anonymous Pro, sans-serif",
+                  }}>
                   Delovniki 8:00-20:00
                 </Typography>
-                <Typography sx={{ fontSize: "14px", fontWeight: 700 }}>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    fontWeight: 700,
+                    fontFamily: "Anonymous Pro, sans-serif",
+                  }}>
                   040 333 666
                 </Typography>
               </Box>
