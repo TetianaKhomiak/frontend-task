@@ -43,7 +43,7 @@ const BlogCard = ({
 
         <NavLink
           to="/blog"
-          className="mt-3 font-(family-name:--font-anonymous) font-bold text-[16px] inline-flex items-center text-left py-1 dark:text-gray-300 transition-all duration-300 hover:gap-3">
+          className="mt-3 font-(family-name:--font-anonymous) font-bold text-[16px] inline-flex items-center text-left py-1 dark:text-gray-300 transition-all duration-300 gap-4 hover:gap-5">
           {buttonText}
           <img
             src={ArrowIcon}
