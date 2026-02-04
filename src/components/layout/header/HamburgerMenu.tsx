@@ -69,6 +69,7 @@ export default function FullScreenHamburgerMenu() {
             gap: 1,
           }}>
           <Typography
+            className="dark:text-gray-300"
             sx={{
               fontSize: "14px",
               fontWeight: 700,
@@ -80,7 +81,7 @@ export default function FullScreenHamburgerMenu() {
             <img
               src={CartIcon}
               alt="Košarica"
-              className="brightness-0 dark:invert"
+              className="brightness-0 dark:invert dark:text-gray-300"
             />
           </IconButton>
           <IconButton onClick={handleOpen}>
@@ -148,7 +149,7 @@ export default function FullScreenHamburgerMenu() {
                   <img
                     src={CartIcon}
                     alt="Košarica"
-                    className="brightness-0 dark:invert"
+                    className="brightness-0 dark:invert dark:text-gray-300"
                   />
                 </IconButton>
               </NavLink>
