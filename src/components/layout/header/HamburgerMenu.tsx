@@ -1,6 +1,7 @@
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
@@ -16,7 +17,6 @@ import NetworkStatusIcon from "../../../assets/icons/ui/network-status.svg";
 import UserIcon from "../../../assets/icons/ui/user.svg";
 import Logo from "../../../assets/images/logo.png";
 import type { NavigationLink } from "../../../types";
-import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 
 export default function FullScreenHamburgerMenu() {
   const [open, setOpen] = useState<boolean>(false);
@@ -69,7 +69,7 @@ export default function FullScreenHamburgerMenu() {
             gap: 1,
           }}>
           <Typography
-            className="dark:text-gray-300"
+            className="text-[#002b01] dark:text-gray-300"
             sx={{
               fontSize: "14px",
               fontWeight: 700,
@@ -77,18 +77,11 @@ export default function FullScreenHamburgerMenu() {
             }}>
             Košarica
           </Typography>
-          {/* <IconButton>
-            <img
-              src={CartIcon}
-              alt="Košarica"
-              className="brightness-0 dark:invert"
-            />
-          </IconButton> */}
           <IconButton>
             <WorkOutlineOutlinedIcon className="text-[#002b01] dark:text-gray-300" />
           </IconButton>
           <IconButton onClick={handleOpen}>
-            <MenuIcon className="dark:text-gray-300" />
+            <MenuIcon className="text-[#002b01] dark:text-gray-300" />
           </IconButton>
         </Box>
       </Box>
@@ -148,13 +141,6 @@ export default function FullScreenHamburgerMenu() {
                 to="/"
                 style={{ display: "flex", alignItems: "center" }}
                 onClick={handleClose}>
-                {/* <IconButton>
-                  <img
-                    src={CartIcon}
-                    alt="Košarica"
-                    className="brightness-0 dark:invert"
-                  />
-                </IconButton> */}
                 <IconButton>
                   <WorkOutlineOutlinedIcon className="text-[#002b01] dark:text-gray-300" />
                 </IconButton>
