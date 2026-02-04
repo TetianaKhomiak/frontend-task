@@ -238,6 +238,8 @@ export default function FullScreenHamburgerMenu() {
                   Non-stop 24/7
                 </Typography>
                 <Typography
+                  component="a"
+                  href="mailto:podpora@zabec.net"
                   sx={{
                     fontSize: "14px",
                     fontWeight: 700,
@@ -290,6 +292,8 @@ export default function FullScreenHamburgerMenu() {
                   Delovniki 8:00-20:00
                 </Typography>
                 <Typography
+                  component="a"
+                  href="tel:040333666"
                   sx={{
                     fontSize: "14px",
                     fontWeight: 700,
