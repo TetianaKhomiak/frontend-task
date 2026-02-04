@@ -85,7 +85,7 @@ export default function FullScreenHamburgerMenu() {
             />
           </IconButton> */}
           <IconButton>
-            <WorkOutlineOutlinedIcon className="dark:text-gray-300" />
+            <WorkOutlineOutlinedIcon className="text-[#002b01] dark:text-gray-300" />
           </IconButton>
           <IconButton onClick={handleOpen}>
             <MenuIcon className="dark:text-gray-300" />
@@ -156,7 +156,7 @@ export default function FullScreenHamburgerMenu() {
                   />
                 </IconButton> */}
                 <IconButton>
-                  <WorkOutlineOutlinedIcon className="dark:text-gray-300" />
+                  <WorkOutlineOutlinedIcon className="text-[#002b01] dark:text-gray-300" />
                 </IconButton>
               </NavLink>
               <IconButton onClick={handleClose}>
