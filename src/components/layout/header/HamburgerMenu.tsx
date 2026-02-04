@@ -17,6 +17,7 @@ import NetworkStatusIcon from "../../../assets/icons/ui/network-status.svg";
 import UserIcon from "../../../assets/icons/ui/user.svg";
 import Logo from "../../../assets/images/logo.png";
 import type { NavigationLink } from "../../../types";
+import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 
 export default function FullScreenHamburgerMenu() {
   const [open, setOpen] = useState<boolean>(false);
@@ -77,12 +78,15 @@ export default function FullScreenHamburgerMenu() {
             }}>
             Košarica
           </Typography>
-          <IconButton>
+          {/* <IconButton>
             <img
               src={CartIcon}
               alt="Košarica"
               className="brightness-0 dark:invert"
             />
+          </IconButton> */}
+          <IconButton>
+            <WorkOutlineOutlinedIcon className="dark:text-gray-300" />
           </IconButton>
           <IconButton onClick={handleOpen}>
             <MenuIcon className="dark:text-gray-300" />
@@ -145,12 +149,15 @@ export default function FullScreenHamburgerMenu() {
                 to="/"
                 style={{ display: "flex", alignItems: "center" }}
                 onClick={handleClose}>
-                <IconButton>
+                {/* <IconButton>
                   <img
                     src={CartIcon}
                     alt="Košarica"
                     className="brightness-0 dark:invert"
                   />
+                </IconButton> */}
+                <IconButton>
+                  <WorkOutlineOutlinedIcon className="dark:text-gray-300" />
                 </IconButton>
               </NavLink>
               <IconButton onClick={handleClose}>
