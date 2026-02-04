@@ -68,18 +68,22 @@ export default function FullScreenHamburgerMenu() {
             my: 3.5,
             gap: 1,
           }}>
-          <Typography
-            className="text-[#002b01] dark:text-gray-300"
-            sx={{
-              fontSize: "14px",
-              fontWeight: 700,
-              fontFamily: "Anonymous Pro, sans-serif",
-            }}>
-            Košarica
-          </Typography>
-          <IconButton>
-            <WorkOutlineOutlinedIcon className="text-[#002b01] dark:text-gray-300" />
-          </IconButton>
+          <NavLink to="#">
+            <Typography
+              className="text-[#002b01] dark:text-gray-300"
+              sx={{
+                fontSize: "14px",
+                fontWeight: 700,
+                fontFamily: "Anonymous Pro, sans-serif",
+              }}>
+              Košarica
+            </Typography>
+          </NavLink>
+          <NavLink to="#">
+            <IconButton>
+              <WorkOutlineOutlinedIcon className="text-[#002b01] dark:text-gray-300" />
+            </IconButton>
+          </NavLink>
           <IconButton onClick={handleOpen}>
             <MenuIcon className="text-[#002b01] dark:text-gray-300" />
           </IconButton>
@@ -114,7 +118,7 @@ export default function FullScreenHamburgerMenu() {
               mt: 2,
             }}>
             <NavLink
-              to="/"
+              to="#"
               style={{ textDecoration: "none", color: "inherit" }}
               onClick={handleClose}>
               <Typography
@@ -130,7 +134,7 @@ export default function FullScreenHamburgerMenu() {
 
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
               <NavLink
-                to="/"
+                to="#"
                 style={{ display: "flex", alignItems: "center" }}
                 onClick={handleClose}>
                 <IconButton>
@@ -138,7 +142,7 @@ export default function FullScreenHamburgerMenu() {
                 </IconButton>
               </NavLink>
               <NavLink
-                to="/"
+                to="#"
                 style={{ display: "flex", alignItems: "center" }}
                 onClick={handleClose}>
                 <IconButton>
