@@ -81,7 +81,7 @@ export default function FullScreenHamburgerMenu() {
             <img
               src={CartIcon}
               alt="Košarica"
-              className="brightness-0 dark:invert dark:text-gray-300"
+              className="brightness-0 dark:invert"
             />
           </IconButton>
           <IconButton onClick={handleOpen}>
@@ -149,7 +149,7 @@ export default function FullScreenHamburgerMenu() {
                   <img
                     src={CartIcon}
                     alt="Košarica"
-                    className="brightness-0 dark:invert dark:text-gray-300"
+                    className="brightness-0 dark:invert"
                   />
                 </IconButton>
               </NavLink>
