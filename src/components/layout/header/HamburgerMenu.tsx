@@ -12,7 +12,6 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import CartIcon from "../../../assets/icons/ui/cart.svg";
 import NetworkStatusIcon from "../../../assets/icons/ui/network-status.svg";
 import UserIcon from "../../../assets/icons/ui/user.svg";
 import Logo from "../../../assets/images/logo.png";
